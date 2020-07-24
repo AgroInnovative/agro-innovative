@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
+@import "https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap";
+@import "~animate.css/animate.min";
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 960px;
+}
+
+.btn {
+  margin: 20px;
+}
+
+/* Extra utilities */
+
+.flex-equal > * {
+  -ms-flex: 1;
+  flex: 1;
+}
+@media (min-width: 768px) {
+  .flex-md-equal > * {
+    -ms-flex: 1;
+    flex: 1;
+  }
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}

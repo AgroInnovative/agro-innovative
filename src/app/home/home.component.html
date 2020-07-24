@@ -1,0 +1,195 @@
+<!-- welcome box -->
+<div
+  id="welcome-div"
+  class="position-relative overflow-hidden p-3 p-md-5 text-center welcome-div"
+  @fade
+>
+  <div
+    class="col-md-5 p-lg-5 mx-auto my-5 welcome-note animate__animated animate__flipInX"
+  >
+    <h1 class="display-4 font-weight-normal">Apex Agro Solutions</h1>
+    <p class="lead font-weight-normal">
+      {{ companyName }} solutions is a company which provides smart agronomy
+      solutions to protect farmers hard earned harvest from pests
+    </p>
+    <button mat-raised-button color="success" class="font-weight-bold" href="#">
+      <!-- <a  class="btn btn-outline-success font-weight-bold" href="#"> -->
+      Coming soon
+    </button>
+  </div>
+</div>
+
+<!-- ecosystem box -->
+<div class="position-relative overflow-hidden p-3 p-md-5 text-center">
+  <div class="mx-auto my-1">
+    <h3 class="display-8 font-weight-normal animate__animated animate__flipInX">
+      OUR ECOSYSTEM
+    </h3>
+    <p class="lead font-weight-normal"></p>
+    <div class="row mx-auto py-5">
+      <div class="col-md-3 col-sm-6" @slide>
+        <img src="../../assets/img/icons/agriculture_expertise.png" alt="" />
+        <div>
+          <h5>AGRICULTURE EXPERTISE</h5>
+          <p>
+            Renown experts, university professors, agricultural consultants and
+            farmers are our associates
+          </p>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6" @slide>
+        <img src="../../assets/img/icons/documentation.png" alt="" />
+        <h5>DOCUMENTATIONS</h5>
+        <p>
+          Instructions and manuals,recommendations - all at your cultivation.
+        </p>
+      </div>
+      <div class="col-md-3 col-sm-6" @slide>
+        <img src="../../assets/img/icons/cloud_platform.png" alt="" />
+        <h5>CLOUD PLATFORM</h5>
+        <p>
+          Solutions are hosted on AWS to ensure scalability, reliability and
+          easy compliance with relevant security and data privacy rules.
+        </p>
+      </div>
+      <div class="col-md-3 col-sm-6" @slide>
+        <img src="../../assets/img/icons/cloud_platform.png" alt="" />
+        <h5>SENSORS AND GATEWAYS</h5>
+        <p>
+          We combine hardware components from multiple vendors to get the best
+          cost/performance ratio.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Pest and disease box -->
+<div
+  class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center pest-disease-div"
+  @fade
+>
+  <div class="col-md-5 p-lg-5 mx-auto my-5 pest-disease-note">
+    <h1 class="display-4 font-weight-normal">Pest And Disease</h1>
+    <p class="lead font-weight-normal">
+      <br />
+      Optimized pesticide usage and protect your harvest using machine learning
+      digital pest spread prediction model
+      <br />
+    </p>
+    <a
+      class="btn btn-success btn-outline-secondary btn-read-more font-weight-bold"
+      href="#"
+      >Read More</a
+    >
+  </div>
+</div>
+
+<!-- Join Our... -->
+<div
+  id="partners-div"
+  class="position-relative overflow-hidden p-md-5 text-center join-our-ecosystem-div"
+>
+  <h1 class="display-4 font-weight-normal py-3">Join Our Ecosystem</h1>
+  <div class="row welcome-note px-5">
+    <div class="col-md-6 col-sm-12 py-4">
+      <img
+        class="agro-innovative-logo"
+        src="../../assets/img/ecosystem.png"
+        alt=""
+      />
+    </div>
+    <div class="col-md-6 col-sm-12 py-5">
+      <p class="lead font-weight-normal">
+        Use {{ companyName }} <br />
+        to rapidly enter smart agriculture market, create new business
+        opportunities, complement in-house expertise and create value-added
+        services and products. <br /><br />
+        WE ARE ACTIVELY SEARCHING FOR: <br />
+        Service providers, Agri-machinery manufacturers Livestock service
+        companies Leverage our know-how and devices! Get in touch to build even
+        more versatile smart agriculture platform. Get our support when you need
+        it, and take your business to the next level!
+      </p>
+
+      <a class="btn btn-lg btn-success font-weight-bold" href="#">
+        Become a partner
+      </a>
+    </div>
+  </div>
+  <!-- partners -->
+  <!-- <div class="col-md-4 col-sm-12 py-2" @slide> -->
+  <div class="partners-div">
+    <div class="row mx-auto py-5">
+      <div
+        *ngFor="let partner of partners"
+        class="media col-md-4 col-sm-12 py-2"
+      >
+        <div class="media-left">
+          <img src="{{ partner.logo }}" class="mr-3 partners-img" alt="..." />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- About us -->
+<div
+  id="about-us"
+  class="position-relative overflow-hidden p-md-5 text-center About-us-div"
+>
+  <div class="py-5">
+    <h1 class="font-weight-bold font-white py-2">About Us</h1>
+    <div class="row welcome-note px-5 p-5">
+      <div class="col-sm py-4">
+        <img
+          class="agro-innovative-logo"
+          src="../../assets/img/logo.png"
+          alt=""
+        />
+      </div>
+      <div class="col-sm py-5">
+        <p class="lead font-weight-normal font-white">
+          {{ companyName }} <br />
+          We are a company which provides smart agricultural solutions to
+          protect harvest of our beloved farmers. <br /><br />
+          <br />
+          Team Agro-Innovative is behind this project. This is a research
+          project under Generation Unlimited Global Youth Challenge organized by
+          UNDP/UNICEF in collaboration with Education Department in Srilanka.
+        </p>
+        <br />
+        <a class="btn btn-lg btn-success font-weight-bold" href="#">
+          Contact Us
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Our Team -->
+<div class="position-relative overflow-hidden py-5 p-md-5 text-center team-div">
+  <div class="col-md-5 mx-auto my-5">
+    <h2>
+      Directors Board Behind The Success
+    </h2>
+  </div>
+  <div class="row mx-auto p-5">
+    <div
+      *ngFor="let member of teamMembers"
+      class="media col-md-6 col-sm-6 py-2"
+    >
+      <div class="media-left">
+        <img src="{{ member.avatar }}" class="avatar mr-3" alt="..." />
+      </div>
+      <div class="media-body">
+        <h5 class="mt-0 media-heading">
+          <a>
+            {{ member.name }}
+          </a>
+        </h5>
+        <p>{{ member.position }}</p>
+      </div>
+    </div>
+  </div>
+</div>

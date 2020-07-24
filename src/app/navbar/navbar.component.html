@@ -1,0 +1,123 @@
+<!-- <nav class="site-header sticky-top py-1">
+  <div class="container d-flex flex-column flex-md-row justify-content-between">
+    <a class="py-2 d-none d-md-inline-block" routerLink="/researches">Home</a>
+    <a class="py-2 d-none d-md-inline-block" routerLink="#">Product</a>
+    <a class="py-2 d-none d-md-inline-block" routerLink="#">Researches</a>
+    <a class="py-2 d-none d-md-inline-block" routerLink="#">About Us</a>
+    <a class="py-2 d-none d-md-inline-block" routerLink="#">Contact Us</a>
+    <a class="py-2 d-none d-md-inline-block" routerLink="#">Pricing</a>
+    <a class="py-2 d-none d-md-inline-block" routerLink="#">Cart</a>
+    <div ngbDropdown class="nav-item dropdown">
+      <a
+        class="py-2 d-none d-md-inline-block dropdown-toggle"
+        ngbDropdownToggle
+        id="dropdown01"
+        data-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false"
+        >Dropdown</a
+      >
+      <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="dropdown01">
+        <a ngbDropdownItem class="dropdown-item" href="#">Action</a>
+        <a ngbDropdownItem class="dropdown-item" href="#">Another action</a>
+        <a ngbDropdownItem class="dropdown-item" href="#"
+          >Something else here</a
+        >
+      </div>
+    </div>
+  </div>
+</nav> -->
+
+<nav class="site-header navbar navbar-expand-lg navbar-dark sticky-top">
+  <div class="container d-flex flex-column flex-md-row justify-content-between">
+    <a class="navbar-brand py-2 d-none d-md-inline-block" href="#welcome-div">
+      Agro-Innovative
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarsExample07XL"
+      aria-controls="navbarsExample07XL"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+      (click)="toggleNavbar()"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div
+      class="collapse navbar-collapse"
+      id="navbarsExample07XL"
+      [ngClass]="{ show: navbarOpen }"
+    >
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active mx-2" routerLinkActive="active current">
+          <a class="nav-link py-2" href="#">
+            Home
+            <span class="sr-only">
+              (current)
+            </span>
+          </a>
+        </li>
+
+        <li class="nav-item mx-2" routerLinkActive="active current">
+          <a class="py-2 nav-link" href="/#partners-div">Partners</a>
+        </li>
+        <li class="nav-item mx-2" routerLinkActive="active current">
+          <a class="py-2 nav-link" href="/#about-us">Abut Us</a>
+        </li>
+
+        <li
+          ngbDropdown
+          class="nav-item dropdown mx-2"
+          routerLinkActive="active current"
+        >
+          <a
+            class="py-2 d-none d-md-inline-block dropdown-toggle nav-link"
+            ngbDropdownToggle
+            id="dropdown01"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            Services
+          </a>
+          <div
+            ngbDropdownMenu
+            class="dropdown-menu"
+            aria-labelledby="dropdown01"
+          >
+            <a ngbDropdownItem class="dropdown-item" routerLink="#">
+              Pest and Disease Prediction
+            </a>
+            <a ngbDropdownItem class="dropdown-item" routerLink="#">
+              Irrigation Optimization
+            </a>
+            <a ngbDropdownItem class="dropdown-item" routerLink="#">
+              Insects Monitoring
+            </a>
+            <a ngbDropdownItem class="dropdown-item" routerLink="#">
+              Fleet Monitoring
+            </a>
+            <a ngbDropdownItem class="dropdown-item" routerLink="#">
+              Consultation
+            </a>
+            <a ngbDropdownItem class="dropdown-item" routerLink="#">
+              Recommendations
+            </a>
+          </div>
+        </li>
+        <li class="nav-item mx-2" routerLinkActive="active current">
+          <a class="py-2 nav-link" routerLink="#">Products</a>
+        </li>
+
+        <li class="nav-item mx-2" routerLinkActive="active current">
+          <a class="py-2 nav-link" href="/contact">Contact Us</a>
+        </li>
+      </ul>
+      <a class="py-2 nav-link" routerLink="#">Register</a>
+      <a class="py-2 nav-link" routerLink="#">Log in</a>
+    </div>
+  </div>
+</nav>

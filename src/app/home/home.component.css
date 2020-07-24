@@ -1,0 +1,58 @@
+/* Welcome Note */
+.welcome-div {
+  background: url(../../assets/img/slide6.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: 100vw 100vh;
+}
+
+.welcome-note > a,
+h1 {
+  color: black;
+}
+
+.btn-read-more {
+  color: black;
+}
+
+/* pest detection div */
+.pest-disease-div {
+  background: url(../../assets/img/slide2.jpg);
+  background-attachment: scroll;
+  background-position: top;
+  background-size: 100vw 100vh;
+}
+
+.pest-disease-note > p {
+  color: rgb(8, 8, 8);
+}
+
+/* Partners */
+.partners-img {
+  height: 105px;
+  width: 100%;
+}
+
+.agro-innovative-logo {
+  width: 30vw;
+}
+
+/* About us */
+.About-us-div {
+  height: "90%";
+  background: linear-gradient(to right, #4b9643, #156136);
+}
+
+.font-white {
+  color: white;
+}
+
+/* team */
+.team-div {
+  background: #e5e5e5;
+}
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+}

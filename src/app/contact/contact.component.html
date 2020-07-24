@@ -1,0 +1,105 @@
+<div @fade class="contact-div py-5">
+  <h3 class="title text-center py-5 animate__animated animate__flip">
+    Contact us
+  </h3>
+  <hr />
+  <div class="row px-5">
+    <div
+      class="col-md-6 col-sm-12 contact-blocks p-5 animate__animated animate__fadeInLeft"
+    >
+      <div class="contact-form text">
+        <form>
+          <div class="py-1">
+            <mat-form-field class="example-form-field">
+              <mat-label>Username</mat-label>
+              <input
+                name="Name"
+                matInput
+                [(ngModel)]="this.message.Name"
+                required
+              />
+              <mat-hint>Type a unique username</mat-hint>
+            </mat-form-field>
+          </div>
+
+          <div class="py-1">
+            <mat-form-field class="example-form-field">
+              <mat-label>Email</mat-label>
+              <input
+                matInput
+                type="email"
+                name="Email"
+                [(ngModel)]="this.message.Email"
+                required
+              />
+              <mat-hint>Type your email address</mat-hint>
+            </mat-form-field>
+          </div>
+
+          <div class="py-1">
+            <mat-form-field class="example-form-field">
+              <mat-label>Phone Number</mat-label>
+              <input
+                type="text"
+                matInput
+                name="Telephone"
+                [(ngModel)]="this.message.Telephone"
+                required=""
+              />
+              <mat-hint>Type your email address</mat-hint>
+            </mat-form-field>
+          </div>
+
+          <div class="py-1">
+            <mat-form-field>
+              <mat-label>Message</mat-label>
+              <textarea
+                matInput
+                name="Message"
+                [(ngModel)]="this.message.Message"
+                cols="30"
+                rows="10"
+              ></textarea>
+              <mat-hint>Type your Message Here</mat-hint>
+            </mat-form-field>
+          </div>
+          <div class="py-1">
+            <input
+              class="btn btn-success"
+              type="submit"
+              value="Submit"
+              (click)="onAdd()"
+            />
+          </div>
+        </form>
+      </div>
+    </div>
+    <div
+      class="col-md-6 col-sm-12 text-center contact-blocks p-5 animate__animated animate__bounceInRight"
+    >
+      <div class="card text-white bg-secondary mb-3" style="max-width: 25rem;">
+        <div class="card-header">Email</div>
+        <div class="card-body">
+          <h5 class="card-title">{{ email }}</h5>
+        </div>
+      </div>
+      <div class="card text-white bg-secondary mb-3" style="max-width: 25rem;">
+        <div class="card-header">Office Email</div>
+        <div class="card-body">
+          <h5 class="card-title">{{ officeAddress }}</h5>
+        </div>
+      </div>
+      <div class="card text-white bg-secondary mb-3" style="max-width: 25rem;">
+        <div class="card-header">Phone Number</div>
+        <div class="card-body">
+          <h5 class="card-title">{{ phoneNumber }}</h5>
+        </div>
+      </div>
+      <!-- <div class="map text-center py-5">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d24195.46256216959!2d-74.0042145!3d40.7084875!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY%2C+USA!5e0!3m2!1sen!2sin!4v1434980604138"
+        ></iframe>
+      </div> -->
+    </div>
+  </div>
+</div>

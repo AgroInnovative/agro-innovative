@@ -1,0 +1,35 @@
+.dropdown-toggle {
+  cursor: pointer;
+}
+
+.site-header {
+  /* background-color: rgb(66, 109, 84); */
+  background-color: #4b9643;
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+}
+.site-header a {
+  color: rgb(3, 3, 3);
+  transition: ease-in-out color 0.15s;
+}
+.site-header a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.dropdown-menu {
+  background: rgb(58, 151, 97);
+}
+
+.dropdown-menu a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+/* body {
+  padding-bottom: 20px;
+} */
+
+/* .navbar {
+  margin-bottom: 20px;
+} */
