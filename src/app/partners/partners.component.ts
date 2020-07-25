@@ -18,16 +18,16 @@ export class PartnersComponent implements OnInit {
   joinEcoSystemImg = 'assets/img/ecosystem.png';
   partners = [
     {
-      partnerName: 'Agricultural Department',
-      logo: 'assets/img/partners/agr-department.png',
+      partnerName: 'Metiorology Department',
+      logo: 'assets/img/partners/metiorology.png',
     },
     {
       partnerName: 'Heyleys Agro Company',
       logo: 'assets/img/partners/heyleys.png',
     },
     {
-      partnerName: 'Metiorology Department',
-      logo: 'assets/img/partners/metiorology.png',
+      partnerName: 'Agricultural Department',
+      logo: 'assets/img/partners/agr-department.png',
     },
   ];
   constructor() {}
