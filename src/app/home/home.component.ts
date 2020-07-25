@@ -15,6 +15,14 @@ import {
 })
 export class HomeComponent {
   companyName = 'ApexAgro';
+  companyLogo = 'assets/img/logo.png';
+  joinEcoSystemImg = 'assets/img/ecosystem.png';
+  ecoSystemImg = [
+    'assets/img/icons/agriculture_expertise.png',
+    'assets/img/icons/documentation.png',
+    'assets/img/icons/cloud_platform.png',
+    'assets/img/icons/cloud_platform.png',
+  ];
 
   partners = [
     {

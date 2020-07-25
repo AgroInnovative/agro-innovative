@@ -28,7 +28,7 @@
     <p class="lead font-weight-normal"></p>
     <div class="row mx-auto py-5">
       <div class="col-md-3 col-sm-6" @slide>
-        <img src="../../assets/img/icons/agriculture_expertise.png" alt="" />
+        <img src="{{ ecoSystemImg[0] }}" alt="" />
         <div>
           <h5>AGRICULTURE EXPERTISE</h5>
           <p>
@@ -38,14 +38,14 @@
         </div>
       </div>
       <div class="col-md-3 col-sm-6" @slide>
-        <img src="../../assets/img/icons/documentation.png" alt="" />
+        <img src="{{ ecoSystemImg[1] }}" alt="" />
         <h5>DOCUMENTATIONS</h5>
         <p>
           Instructions and manuals,recommendations - all at your cultivation.
         </p>
       </div>
       <div class="col-md-3 col-sm-6" @slide>
-        <img src="../../assets/img/icons/cloud_platform.png" alt="" />
+        <img src="{{ ecoSystemImg[2] }}" alt="" />
         <h5>CLOUD PLATFORM</h5>
         <p>
           Solutions are hosted on AWS to ensure scalability, reliability and
@@ -53,7 +53,7 @@
         </p>
       </div>
       <div class="col-md-3 col-sm-6" @slide>
-        <img src="../../assets/img/icons/cloud_platform.png" alt="" />
+        <img src="{{ ecoSystemImg[3] }}" alt="" />
         <h5>SENSORS AND GATEWAYS</h5>
         <p>
           We combine hardware components from multiple vendors to get the best
@@ -93,11 +93,7 @@
   <h1 class="display-4 font-weight-normal py-3">Join Our Ecosystem</h1>
   <div class="row welcome-note px-5">
     <div class="col-md-6 col-sm-12 py-4">
-      <img
-        class="agro-innovative-logo"
-        src="../../assets/img/ecosystem.png"
-        alt=""
-      />
+      <img class="agro-innovative-logo" src="{{ joinEcoSystemImg }}" alt="" />
     </div>
     <div class="col-md-6 col-sm-12 py-5">
       <p class="lead font-weight-normal">
@@ -142,11 +138,7 @@
     <h1 class="font-weight-bold font-white py-2">About Us</h1>
     <div class="row welcome-note px-5 p-5">
       <div class="col-sm py-4">
-        <img
-          class="agro-innovative-logo"
-          src="../../assets/img/logo.png"
-          alt=""
-        />
+        <img class="agro-innovative-logo" src="{{ companyLogo }}" alt="" />
       </div>
       <div class="col-sm py-5">
         <p class="lead font-weight-normal font-white">
