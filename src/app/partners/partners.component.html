@@ -9,8 +9,8 @@
   >
     Join Our Ecosystem
   </h1>
-  <div class="row welcome-note px-5">
-    <div class="col-md-6 col-sm-12 p-4 animate__animated animate__fadeInLeft">
+  <div class="row welcome-note">
+    <div class="col-md-6 col-sm-12 animate__animated animate__fadeInLeft">
       <img class="agro-innovative-logo" src="{{ joinEcoSystemImg }}" alt="" />
     </div>
     <div class="col-md-6 col-sm-12 py-5 animate__animated animate__fadeInRight">
@@ -37,12 +37,12 @@
   <!-- partners -->
   <!-- <div class="col-md-4 col-sm-12 py-2" @slide> -->
   <div class="partners-div">
-    <div class="row mx-auto py-5">
+    <div class="row mx-auto">
       <div
         *ngFor="let partner of partners"
         class="media col-md-4 col-sm-12 py-2"
       >
-        <div class="media-left" @slide>
+        <div class="media-left py-4" @slide>
           <img src="{{ partner.logo }}" class="mr-3 partners-img" alt="..." />
         </div>
       </div>
