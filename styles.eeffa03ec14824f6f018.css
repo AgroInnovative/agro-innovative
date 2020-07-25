@@ -17,7 +17,7 @@
  * Licensed under the MIT license - http://opensource.org/licenses/MIT
  *
  * Copyright (c) 2020 Animate.css
- */@media (prefers-reduced-motion:reduce),print{.animate__animated{animation-duration:1ms!important;transition-duration:1ms!important;animation-iteration-count:1!important}.animate__animated[class*=Out]{opacity:0}}html{scroll-behavior:smooth}.container{max-width:960px}.btn{margin:20px}.flex-equal>*{flex:1}@media (min-width:768px){.flex-md-equal>*{flex:1}}.overflow-hidden{overflow:hidden}
+ */@media (prefers-reduced-motion:reduce),print{.animate__animated{animation-duration:1ms!important;transition-duration:1ms!important;animation-iteration-count:1!important}.animate__animated[class*=Out]{opacity:0}}html{scroll-behavior:smooth}.container{max-width:960px}.font-white{color:#fff}.btn{margin:20px}.flex-equal>*{flex:1}@media (min-width:768px){.flex-md-equal>*{flex:1}}.overflow-hidden{overflow:hidden}
 /*!
  * animate.css - https://animate.style/
  * Version - 4.1.0
