@@ -19,15 +19,15 @@ export class HomeComponent {
   partners = [
     {
       partnerName: 'Agricultural Department',
-      logo: '../../assets/img/partners/agr-department.png',
+      logo: 'assets/img/partners/agr-department.png',
     },
     {
       partnerName: 'Heyleys Agro Company',
-      logo: '../../assets/img/partners/heyleys.png',
+      logo: 'assets/img/partners/heyleys.png',
     },
     {
       partnerName: 'Metiorology Department',
-      logo: '../../assets/img/partners/metiorology.png',
+      logo: 'assets/img/partners/metiorology.png',
     },
   ];
 
@@ -35,27 +35,27 @@ export class HomeComponent {
     {
       name: 'Lilan Udayanga',
       position: 'Management Undergraduate',
-      avatar: '../../assets/img/team/lilan.png',
+      avatar: 'assets/img/team/lilan.png',
     },
     {
       name: 'Mihindu Ranasinghe',
       position: 'Software Engineering Undergraduate',
-      avatar: '../../assets/img/team/mihindu.png',
+      avatar: 'assets/img/team/mihindu.png',
     },
     {
       name: 'Pankajan Satkunam',
       position: 'Software Engineering Undergraduate',
-      avatar: '../../assets/img/team/pankajan.png',
+      avatar: 'assets/img/team/pankajan.png',
     },
     {
       name: 'Zeena Ranasinghe',
       position: 'Software Engineering Undergraduate',
-      avatar: '../../assets/img/team/zeena.png',
+      avatar: 'assets/img/team/zeena.png',
     },
     {
       name: 'Sanjula Karunarathne',
       position: 'Software Engineering Undergraduate',
-      avatar: '../../assets/img/team/sanjula.jpg',
+      avatar: 'assets/img/team/sanjula.jpg',
     },
   ];
 }
