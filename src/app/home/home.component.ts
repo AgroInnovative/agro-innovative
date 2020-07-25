@@ -41,7 +41,7 @@ export class HomeComponent {
       avatar: 'assets/img/team/pankajan.png',
     },
     {
-      name: 'Zeena Ranasinghe',
+      name: 'Zeena Youhan',
       position: 'Software Engineering Undergraduate',
       avatar: 'assets/img/team/zeena.png',
     },
