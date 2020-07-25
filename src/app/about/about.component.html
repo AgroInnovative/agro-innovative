@@ -1,16 +1,22 @@
+<!-- About us -->
 <div
+  @fade
   id="about-us"
   class="position-relative overflow-hidden p-md-5 text-center About-us-div"
 >
   <div class="py-5">
-    <h1 class="font-weight-bold font-white py-2">About Us</h1>
+    <h1
+      class="font-weight-bold font-white py-2 animate__animated animate__flip"
+    >
+      About Us
+    </h1>
     <div class="row welcome-note px-5 p-5">
-      <div class="col-sm py-4">
-        <!-- <img class="agro-innovative-logo" src="{{ companyLogo }}" alt="" /> -->
+      <div class="col-sm py-4 animate__animated animate__fadeInLeft">
+        <img class="agro-innovative-logo" src="{{ companyLogo }}" alt="" />
       </div>
-      <div class="col-sm py-5">
+      <div class="col-sm py-5 animate__animated animate__fadeInRight">
         <p class="lead font-weight-normal font-white">
-          <br />
+          {{ companyName }} <br />
           We are a company which provides smart agricultural solutions to
           protect harvest of our beloved farmers. <br /><br />
           <br />

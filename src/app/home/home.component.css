@@ -27,24 +27,8 @@ h1 {
   color: rgb(8, 8, 8);
 }
 
-/* Partners */
-.partners-img {
-  height: 105px;
-  width: 100%;
-}
-
 .agro-innovative-logo {
   width: 30vw;
-}
-
-/* About us */
-.About-us-div {
-  height: "90%";
-  background: linear-gradient(to right, #4b9643, #156136);
-}
-
-.font-white {
-  color: white;
 }
 
 /* team */

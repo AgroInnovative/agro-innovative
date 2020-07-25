@@ -13,6 +13,9 @@ html {
   max-width: 960px;
 }
 
+.font-white {
+  color: white;
+}
 .btn {
   margin: 20px;
 }

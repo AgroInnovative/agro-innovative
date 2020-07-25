@@ -24,21 +24,6 @@ export class HomeComponent {
     'assets/img/icons/cloud_platform.png',
   ];
 
-  partners = [
-    {
-      partnerName: 'Agricultural Department',
-      logo: 'assets/img/partners/agr-department.png',
-    },
-    {
-      partnerName: 'Heyleys Agro Company',
-      logo: 'assets/img/partners/heyleys.png',
-    },
-    {
-      partnerName: 'Metiorology Department',
-      logo: 'assets/img/partners/metiorology.png',
-    },
-  ];
-
   teamMembers = [
     {
       name: 'Lilan Udayanga',

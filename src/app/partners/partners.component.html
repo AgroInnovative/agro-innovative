@@ -1,0 +1,51 @@
+<!-- Join Our... -->
+<div
+  @fade
+  id="partners-div"
+  class="position-relative overflow-hidden p-md-5 text-center join-our-ecosystem-div"
+>
+  <h1
+    class="display-4 font-weight-normal py-3 animate__animated animate__zoomIn"
+  >
+    Join Our Ecosystem
+  </h1>
+  <div class="row welcome-note px-5">
+    <div class="col-md-6 col-sm-12 py-4 animate__animated animate__fadeInLeft">
+      <img class="agro-innovative-logo" src="{{ joinEcoSystemImg }}" alt="" />
+    </div>
+    <div class="col-md-6 col-sm-12 py-5 animate__animated animate__fadeInRight">
+      <p class="lead font-weight-normal">
+        Use {{ companyName }} <br />
+        to rapidly enter smart agriculture market, create new business
+        opportunities, complement in-house expertise and create value-added
+        services and products. <br /><br />
+        WE ARE ACTIVELY SEARCHING FOR: <br />
+        Service providers, Agri-machinery manufacturers Livestock service
+        companies Leverage our know-how and devices! Get in touch to build even
+        more versatile smart agriculture platform. Get our support when you need
+        it, and take your business to the next level!
+      </p>
+
+      <a
+        class="btn btn-lg btn-success font-weight-bold animate__animated animate__fadeIn"
+        href="#"
+      >
+        Become a partner
+      </a>
+    </div>
+  </div>
+  <!-- partners -->
+  <!-- <div class="col-md-4 col-sm-12 py-2" @slide> -->
+  <div class="partners-div">
+    <div class="row mx-auto py-5">
+      <div
+        *ngFor="let partner of partners"
+        class="media col-md-4 col-sm-12 py-2"
+      >
+        <div class="media-left" @slide>
+          <img src="{{ partner.logo }}" class="mr-3 partners-img" alt="..." />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -18,6 +18,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
 
 import { MessageService } from './contact/message.service';
 import { FormsModule } from '@angular/forms';
+import { PartnersComponent } from './partners/partners.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,8 @@ import { FormsModule } from '@angular/forms';
     ContactComponent,
     FooterComponent,
     NotFoundComponent,
+    PartnersComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,
