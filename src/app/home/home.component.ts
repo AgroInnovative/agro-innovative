@@ -14,7 +14,7 @@ import {
   animations: [fade, slide],
 })
 export class HomeComponent {
-  companyName = 'ApexAgro';
+  companyName = 'PureAgro';
   companyLogo = 'assets/img/logo.png';
   joinEcoSystemImg = 'assets/img/ecosystem.png';
   ecoSystemImg = [
