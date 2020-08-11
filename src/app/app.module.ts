@@ -1,5 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { environment } from './../environments/environment';
+//import { environment } from './../environments/environment.prod';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
@@ -20,6 +26,7 @@ import { MessageService } from './contact/message.service';
 import { FormsModule } from '@angular/forms';
 import { PartnersComponent } from './partners/partners.component';
 import { AboutComponent } from './about/about.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -33,8 +40,12 @@ import { AboutComponent } from './about/about.component';
     NotFoundComponent,
     PartnersComponent,
     AboutComponent,
+    LoginComponent,
   ],
   imports: [
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
+    AngularFireDatabaseModule,
     BrowserModule,
     AppRoutingModule,
     NgbModule,
