@@ -30,6 +30,8 @@ import { LoginComponent } from './login/login.component';
 import { MessageService } from './contact/message.service';
 import { AuthService } from './auth/auth.service';
 import { AuthGuard } from './auth/auth-guard.service';
+import { UserService } from './user.service';
+import { AdminAuthGuardService } from './auth/admin-auth-guard.service';
 
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { CheckOutComponent } from './check-out/check-out.component';
@@ -70,7 +72,13 @@ import { RegisterComponent } from './register/register.component';
     HttpClientModule,
     FormsModule,
   ],
-  providers: [MessageService, AuthService, AuthGuard],
+  providers: [
+    MessageService,
+    AuthService,
+    AuthGuard,
+    AdminAuthGuardService,
+    UserService,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

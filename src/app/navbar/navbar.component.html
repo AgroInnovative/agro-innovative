@@ -87,14 +87,7 @@
         </li>
       </ul>
 
-      <ng-template #anonymousUser>
-        <a class="py-2 nav-link" routerLink="register">Register</a>
-        <a class="py-2 nav-link" routerLink="login">Log in</a>
-      </ng-template>
-      <ul
-        class="navbar-nav mr-auto"
-        *ngIf="auth.user$ | async as user; else anonymousUser"
-      >
+      <ul class="navbar-nav mr-auto" *ngIf="appUser; else anonymousUser">
         <li
           ngbDropdown
           class="nav-item dropdown mx-2"
@@ -108,7 +101,7 @@
             aria-haspopup="true"
             aria-expanded="false"
           >
-            {{ user.displayName }}
+            {{ appUser.name }}
           </a>
           <div
             ngbDropdownMenu
@@ -123,25 +116,35 @@
             >
               Dashboard
             </a>
-            <a
-              ngbDropdownItem
-              class="dropdown-item"
-              (click)="logout()"
-              routerLink="#"
-            >
+            <a ngbDropdownItem class="dropdown-item" routerLink="#">
+              My Orders
+            </a>
+            <a ngbDropdownItem class="dropdown-item" routerLink="#">
               Edit Profile
             </a>
-            <a
-              ngbDropdownItem
-              class="dropdown-item"
-              (click)="logout()"
-              routerLink="#"
-            >
+            <hr />
+
+            <ng-container *ngIf="appUser.isAdmin">
+              <a ngbDropdownItem class="dropdown-item" href="admin/orders">
+                Manage Orders
+              </a>
+              <a ngbDropdownItem class="dropdown-item" href="admin/products">
+                Manage Products
+              </a>
+              <hr />
+            </ng-container>
+
+            <a ngbDropdownItem class="dropdown-item" (click)="logout()">
               Log Out
             </a>
           </div>
         </li>
       </ul>
+
+      <ng-template #anonymousUser>
+        <a class="py-2 nav-link" routerLink="register">Register</a>
+        <a class="py-2 nav-link" routerLink="login">Log in</a>
+      </ng-template>
     </div>
   </div>
 </nav>
