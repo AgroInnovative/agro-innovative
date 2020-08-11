@@ -1,4 +1,5 @@
-<nav class="site-header navbar navbar-expand-lg navbar-dark sticky-top">
+<!-- <nav class="site-header navbar navbar-expand-lg navbar-dark sticky-top"> -->
+<nav class="site-header navbar navbar-expand-lg navbar-dark">
   <div class="container d-flex flex-column flex-md-row justify-content-between">
     <a class="navbar-brand py-2 d-none d-md-inline-block" routerLink="/">
       Agro-Innovative
@@ -27,13 +28,13 @@
         </li>
 
         <li class="nav-item mx-2" routerLinkActive="active current">
-          <a class="py-2 nav-link" href="about">About Us</a>
-          <!-- <a class="py-2 nav-link" routerLink="/about">Abut Us</a> -->
+          <!-- <a class="py-2 nav-link" href="about">About Us</a> -->
+          <a class="py-2 nav-link" routerLink="/about">Abut Us</a>
         </li>
 
         <li class="nav-item mx-2" routerLinkActive="active current">
-          <a class="py-2 nav-link" href="partners">Partners</a>
-          <!-- <a class="py-2 nav-link" routerLink="/partners">Partners</a> -->
+          <!-- <a class="py-2 nav-link" href="partners">Partners</a> -->
+          <a class="py-2 nav-link" routerLink="/partners">Partners</a>
         </li>
 
         <li
@@ -77,16 +78,70 @@
           </div>
         </li>
         <li class="nav-item mx-2">
-          <a class="py-2 nav-link" routerLink="#">Products</a>
+          <a class="py-2 nav-link" href="products">Products</a>
         </li>
 
         <li class="nav-item mx-2" routerLinkActive="active current">
-          <a class="py-2 nav-link" href="contact">Contact Us</a>
-          <!-- <a class="py-2 nav-link" routerLink="/contact">Contact Us</a> -->
+          <!-- <a class="py-2 nav-link" href="contact">Contact Us</a> -->
+          <a class="py-2 nav-link" routerLink="/contact">Contact Us</a>
         </li>
       </ul>
-      <a class="py-2 nav-link" routerLink="#">Register</a>
-      <a class="py-2 nav-link" href="login">Log in</a>
+
+      <ng-template #anonymousUser>
+        <a class="py-2 nav-link" routerLink="register">Register</a>
+        <a class="py-2 nav-link" routerLink="login">Log in</a>
+      </ng-template>
+      <ul
+        class="navbar-nav mr-auto"
+        *ngIf="auth.user$ | async as user; else anonymousUser"
+      >
+        <li
+          ngbDropdown
+          class="nav-item dropdown mx-2"
+          routerLinkActive="active current"
+        >
+          <a
+            class="py-2 d-none d-md-inline-block dropdown-toggle nav-link"
+            ngbDropdownToggle
+            id="dropdown01"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            {{ user.displayName }}
+          </a>
+          <div
+            ngbDropdownMenu
+            class="dropdown-menu"
+            aria-labelledby="dropdown01"
+          >
+            <a
+              ngbDropdownItem
+              class="dropdown-item"
+              (click)="logout()"
+              routerLink="#"
+            >
+              Dashboard
+            </a>
+            <a
+              ngbDropdownItem
+              class="dropdown-item"
+              (click)="logout()"
+              routerLink="#"
+            >
+              Edit Profile
+            </a>
+            <a
+              ngbDropdownItem
+              class="dropdown-item"
+              (click)="logout()"
+              routerLink="#"
+            >
+              Log Out
+            </a>
+          </div>
+        </li>
+      </ul>
     </div>
   </div>
 </nav>
