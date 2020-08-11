@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
@@ -18,11 +19,11 @@ import { HomeComponent } from './home/home.component';
 import { ProductsComponent } from './products/products.component';
 import { ResearchsComponent } from './researchs/researchs.component';
 import { ContactComponent } from './contact/contact.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FooterComponent } from './footer/footer.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 
 import { FormsModule } from '@angular/forms';
+import { CustomFormsModule } from 'ng2-validation';
 import { PartnersComponent } from './partners/partners.component';
 import { AboutComponent } from './about/about.component';
 import { LoginComponent } from './login/login.component';
@@ -32,6 +33,8 @@ import { AuthService } from './auth/auth.service';
 import { AuthGuard } from './auth/auth-guard.service';
 import { UserService } from './user.service';
 import { AdminAuthGuardService } from './auth/admin-auth-guard.service';
+import { CategoryService } from './admin/product-form/category.service';
+import { ProductService } from './admin/product.service';
 
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { CheckOutComponent } from './check-out/check-out.component';
@@ -39,6 +42,7 @@ import { OrderSuccessComponent } from './order-success/order-success.component';
 import { MyOrdersComponent } from './my-orders/my-orders.component';
 import { AdminProductsComponent } from './admin/admin-products/admin-products.component';
 import { RegisterComponent } from './register/register.component';
+import { ProductFormComponent } from './admin/product-form/product-form.component';
 
 @NgModule({
   declarations: [
@@ -59,6 +63,7 @@ import { RegisterComponent } from './register/register.component';
     MyOrdersComponent,
     AdminProductsComponent,
     RegisterComponent,
+    ProductFormComponent,
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebase),
@@ -71,6 +76,7 @@ import { RegisterComponent } from './register/register.component';
     MatComponentsModule, //Angular Materials
     HttpClientModule,
     FormsModule,
+    CustomFormsModule,
   ],
   providers: [
     MessageService,
@@ -78,6 +84,8 @@ import { RegisterComponent } from './register/register.component';
     AuthGuard,
     AdminAuthGuardService,
     UserService,
+    CategoryService,
+    ProductService,
   ],
   bootstrap: [AppComponent],
 })
