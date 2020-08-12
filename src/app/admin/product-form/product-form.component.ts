@@ -3,6 +3,7 @@ import { CategoryService } from 'src/app/admin/product-form/category.service';
 import { ProductService } from '../product.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { take } from 'rxjs/operators';
+import { URL } from '@angular/fire/database';
 
 @Component({
   selector: 'app-product-form',
@@ -11,7 +12,8 @@ import { take } from 'rxjs/operators';
 })
 export class ProductFormComponent implements OnInit {
   categories$;
-  product;
+  //product = {}; //Use this to work add new Product properly.
+  product; //Use this while developing to remove some errors
   id;
 
   constructor(
@@ -40,6 +42,13 @@ export class ProductFormComponent implements OnInit {
 
     //console.log(product);
     this.router.navigate(['/admin/products']);
+  }
+
+  delete() {
+    if (confirm('Are you sure you want to delete this product?')) {
+      this.productService.delete(this.id);
+      this.router.navigate(['/admin/products']);
+    }
   }
 
   ngOnInit(): void {}
