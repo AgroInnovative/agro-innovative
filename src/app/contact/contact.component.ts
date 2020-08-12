@@ -18,7 +18,7 @@ export class ContactComponent implements OnInit {
   message: Message = new Message('', '', '', '');
   constructor(private messageService: MessageService) {}
 
-  email = 'agroinnovative@gmail.com';
+  email = 'hello@elzian.com';
   officeAddress = 'KandyRoad, Kurunegala';
   phoneNumber = '0768416637';
   ngOnInit(): void {}

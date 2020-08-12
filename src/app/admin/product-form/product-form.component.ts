@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy, Pipe } from '@angular/core';
 import { CategoryService } from 'src/app/admin/product-form/category.service';
 import { ProductService } from '../product.service';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
+import { take } from 'rxjs/operators';
 
 @Component({
   selector: 'app-product-form',
@@ -10,18 +11,34 @@ import { Router } from '@angular/router';
 })
 export class ProductFormComponent implements OnInit {
   categories$;
+  product;
+  id;
 
   constructor(
     private router: Router,
+    private route: ActivatedRoute,
     private categoryService: CategoryService,
     private productService: ProductService
   ) {
     this.categories$ = categoryService.getCategories();
+
+    this.id = this.route.snapshot.paramMap.get('id');
+
+    if (this.id) {
+      this.productService
+        .get(this.id)
+        .pipe(take(1)) //Then no need to unsubscribe
+        .subscribe((p) => (this.product = p));
+
+      console.log(this.product);
+    }
   }
 
   save(product) {
+    if (this.id) this.productService.update(this.id, product);
+    else this.productService.create(product);
+
     //console.log(product);
-    this.productService.create(product);
     this.router.navigate(['/admin/products']);
   }
 
