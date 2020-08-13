@@ -48,6 +48,7 @@ import { ProductFormComponent } from './admin/product-form/product-form.componen
 import { UserDetailsFormComponent } from './farmers/user-details-form/user-details-form.component';
 import { UserDashboardComponent } from './farmers/user-dashboard/user-dashboard.component';
 import { UserDetailsComponent } from './farmers/user-details/user-details.component';
+import { ProductFilterComponent } from './products/product-filter/product-filter.component';
 
 @NgModule({
   declarations: [
@@ -72,6 +73,7 @@ import { UserDetailsComponent } from './farmers/user-details/user-details.compon
     UserDetailsFormComponent,
     UserDashboardComponent,
     UserDetailsComponent,
+    ProductFilterComponent,
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebase),
