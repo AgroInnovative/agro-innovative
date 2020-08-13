@@ -15,6 +15,8 @@ import { AdminProductsComponent } from './admin/admin-products/admin-products.co
 import { AdminOrdersComponent } from './admin/admin-orders/admin-orders.component';
 import { MyOrdersComponent } from './my-orders/my-orders.component';
 import { ProductFormComponent } from './admin/product-form/product-form.component';
+import { UserDashboardComponent } from './farmers/user-dashboard/user-dashboard.component';
+import { UserDetailsFormComponent } from './farmers/user-details-form/user-details-form.component';
 
 import { AuthGuard } from './auth/auth-guard.service';
 import { AdminAuthGuardService } from './auth/admin-auth-guard.service';
@@ -57,6 +59,18 @@ const routes: Routes = [
     path: 'admin/orders',
     component: AdminOrdersComponent,
     canActivate: [AuthGuard, AdminAuthGuardService],
+  },
+
+  //farmers
+  {
+    path: 'dashboard',
+    component: UserDashboardComponent,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'edit-profile',
+    component: UserDetailsFormComponent,
+    canActivate: [AuthGuard],
   },
 
   { path: '**', component: NotFoundComponent },

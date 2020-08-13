@@ -3,7 +3,6 @@ import { CategoryService } from 'src/app/admin/product-form/category.service';
 import { ProductService } from '../product.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { take } from 'rxjs/operators';
-import { URL } from '@angular/fire/database';
 
 @Component({
   selector: 'app-product-form',

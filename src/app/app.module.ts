@@ -35,6 +35,8 @@ import { UserService } from './user.service';
 import { AdminAuthGuardService } from './auth/admin-auth-guard.service';
 import { CategoryService } from './admin/product-form/category.service';
 import { ProductService } from './admin/product.service';
+import { DistrictService } from './farmers/user-details-form/district.service';
+import { CropsService } from './farmers/user-details-form/crops.service';
 
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { CheckOutComponent } from './check-out/check-out.component';
@@ -43,6 +45,8 @@ import { MyOrdersComponent } from './my-orders/my-orders.component';
 import { AdminProductsComponent } from './admin/admin-products/admin-products.component';
 import { RegisterComponent } from './register/register.component';
 import { ProductFormComponent } from './admin/product-form/product-form.component';
+import { UserDetailsFormComponent } from './farmers/user-details-form/user-details-form.component';
+import { UserDashboardComponent } from './farmers/user-dashboard/user-dashboard.component';
 
 @NgModule({
   declarations: [
@@ -64,6 +68,8 @@ import { ProductFormComponent } from './admin/product-form/product-form.componen
     AdminProductsComponent,
     RegisterComponent,
     ProductFormComponent,
+    UserDetailsFormComponent,
+    UserDashboardComponent,
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebase),
@@ -86,6 +92,8 @@ import { ProductFormComponent } from './admin/product-form/product-form.componen
     UserService,
     CategoryService,
     ProductService,
+    DistrictService,
+    CropsService,
   ],
   bootstrap: [AppComponent],
 })

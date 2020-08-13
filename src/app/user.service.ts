@@ -17,6 +17,19 @@ export class UserService {
   }
 
   get(uid: string): AngularFireObject<AppUser> {
+    //to get current user
     return this.db.object('/users/' + uid);
+  }
+
+  getAll() {
+    return this.db.list('/users').snapshotChanges();
+  }
+
+  getUser(userId) {
+    return this.db.object('/users/' + userId).valueChanges();
+  }
+
+  update(userId, user) {
+    return this.db.object('/users/' + userId).update(user);
   }
 }
