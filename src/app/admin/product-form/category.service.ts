@@ -7,7 +7,7 @@ import { AngularFireDatabase } from '@angular/fire/database';
 export class CategoryService {
   constructor(private db: AngularFireDatabase) {}
 
-  getCategories() {
+  getAll() {
     // console.log(this.db.list('/product-categories'));
     return this.db.list('/product-categories').snapshotChanges();
   }

@@ -3,6 +3,16 @@
     <a href="/admin/products/new" class="btn btn-primary">New Product</a>
   </p>
 
+  <p>
+    <input
+      #query
+      (keyup)="filter(query.value)"
+      type="text"
+      class="form-control"
+      placeholder="search"
+    />
+  </p>
+
   <table class="table">
     <thead>
       <tr>
@@ -12,7 +22,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let p of products$ | async">
+      <tr *ngFor="let p of filteredProducts">
         <td>{{ p.payload.val().title }}</td>
         <td>RS: {{ p.payload.val().price }} .00</td>
         <td>
