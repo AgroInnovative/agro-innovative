@@ -47,6 +47,7 @@ import { RegisterComponent } from './register/register.component';
 import { ProductFormComponent } from './admin/product-form/product-form.component';
 import { UserDetailsFormComponent } from './farmers/user-details-form/user-details-form.component';
 import { UserDashboardComponent } from './farmers/user-dashboard/user-dashboard.component';
+import { UserDetailsComponent } from './farmers/user-details/user-details.component';
 
 @NgModule({
   declarations: [
@@ -70,6 +71,7 @@ import { UserDashboardComponent } from './farmers/user-dashboard/user-dashboard.
     ProductFormComponent,
     UserDetailsFormComponent,
     UserDashboardComponent,
+    UserDetailsComponent,
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebase),

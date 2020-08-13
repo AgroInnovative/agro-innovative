@@ -1,0 +1,51 @@
+<div class="card p-4">
+  <img src="" class="card-img-top" />
+  <h3>Details about you</h3>
+  <p>
+    Please consider that all our pest predictions are calculated according to
+    these details you have provided us.
+  </p>
+  <div class="card-body">
+    <table class="table">
+      <tr>
+        <td>Your Name :</td>
+        <td>
+          <h5 class="card-title">{{ appUser.name }}</h5>
+        </td>
+      </tr>
+      <tr>
+        <td>Your City :</td>
+        <td>
+          <h5 class="card-title">{{ appUser.city }}</h5>
+        </td>
+      </tr>
+      <tr>
+        <td>Your District :</td>
+        <td>
+          <h5 class="card-title">{{ appUser.district }}</h5>
+        </td>
+      </tr>
+      <tr>
+        <td>Google Geo Location :</td>
+        <td>
+          <h5 class="card-title">{{ appUser.location }}</h5>
+        </td>
+      </tr>
+      <tr>
+        <td>Your Phone Number :</td>
+        <td>
+          <h5 class="card-title">{{ appUser.phone }}</h5>
+        </td>
+      </tr>
+      <tr>
+        <td>Crops you have cultivated :</td>
+        <td>
+          <h5 class="card-title">{{ appUser.crops }}</h5>
+        </td>
+      </tr>
+      <button type="button" class="btn btn-success" routerLink="/edit-profile">
+        Edit Details
+      </button>
+    </table>
+  </div>
+</div>
