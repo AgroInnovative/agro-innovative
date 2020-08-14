@@ -37,6 +37,7 @@ import { CategoryService } from './admin/product-form/category.service';
 import { ProductService } from './admin/product.service';
 import { DistrictService } from './farmers/user-details-form/district.service';
 import { CropsService } from './farmers/user-details-form/crops.service';
+import { ShoppingCartService } from './products/shopping-cart.service';
 
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { CheckOutComponent } from './check-out/check-out.component';
@@ -98,6 +99,7 @@ import { ProductFilterComponent } from './products/product-filter/product-filter
     ProductService,
     DistrictService,
     CropsService,
+    ShoppingCartService,
   ],
   bootstrap: [AppComponent],
 })

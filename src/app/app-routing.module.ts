@@ -30,7 +30,11 @@ const routes: Routes = [
   { path: 'shopping-cart', component: ShoppingCartComponent },
   { path: 'login', component: LoginComponent },
 
-  { path: 'products', component: ProductsComponent, canActivate: [AuthGuard] },
+  {
+    path: 'products',
+    component: ProductsComponent,
+    //canActivate: [AuthGuard]
+  },
   { path: 'check-out', component: CheckOutComponent, canActivate: [AuthGuard] },
   {
     path: 'order-success',
