@@ -1,21 +1,69 @@
 <div class="container">
-  <h1>Shooping Cart</h1>
-  <p>You have {{ CartItemCount }} items in your shopping cart</p>
+  <h1>Shopping Cart</h1>
+  <p>
+    <b> You have {{ CartItemCount }} items in your shopping cart</b>
+    <a routerLink="../products" *ngIf="cart">
+      <button (click)="clearCart()" type="button" class="btn btn-light btn-sm">
+        Clear Shopping Cart
+      </button>
+    </a>
+  </p>
 
   <table class="table">
     <thead>
       <tr>
+        <th></th>
         <th>Product</th>
         <th>Unit Price</th>
         <th>Quantity</th>
+        <th>Total</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let productId of productIds">
+        <td>
+          <img
+            [src]="cart.items[productId].product.imageUrl"
+            class="thumbnail"
+          />
+        </td>
         <td>{{ cart.items[productId].product.title }}</td>
-        <td>{{ cart.items[productId].product.price }}</td>
+        <td>
+          {{ cart.items[productId].product.price | currency: "Rs ":true }}
+        </td>
         <td>{{ cart.items[productId].quantity }}</td>
+        <td>
+          {{
+            cart.items[productId].product.price *
+              cart.items[productId].quantity | currency: "Rs ":true
+          }}
+        </td>
       </tr>
     </tbody>
+    <tfoot>
+      <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th>{{ sumOfCart | currency: "Rs ":true }}</th>
+      </tr>
+    </tfoot>
   </table>
+  <div *ngIf="!cart" class="container" style="text-align: center;">
+    <h1>Your Shopping Cart is empty.</h1>
+    <button class="btn btn-success btn-lg" routerLink="../products">
+      Shop Now
+    </button>
+  </div>
+
+  <a
+    (click)="clearCart()"
+    routerLink="/check-out"
+    *ngIf="cart"
+    type="button"
+    class="btn btn-success btn-sm"
+  >
+    Check Out
+  </a>
 </div>

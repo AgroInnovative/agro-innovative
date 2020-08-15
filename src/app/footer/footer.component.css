@@ -3,16 +3,16 @@
 }
 .footer {
   padding: 4em 0 3em;
-  background-color:whitesmoke;
+  background-color: whitesmoke;
 }
 .footer-grid h3.title {
   padding: 0.3em 0;
   text-align: left;
   width: 69%;
-  border-color: #E8DA97;
-  font-family: 'Roboto-Regular';
+  border-color: #e8da97;
+  font-family: "Roboto-Regular";
   font-size: 1.8em;
-  color: #A7913F;
+  color: #a7913f;
 }
 .footer-grid ul {
   margin: 0;
@@ -21,22 +21,22 @@
 .footer-grid ul li {
   display: block;
   margin: 0 0 10px;
-  color:#CCAC16;
+  color: #ccac16;
   font-size: 1em;
 }
 
-.footer-grid{
+.footer-grid {
   display: inline-block;
 }
 .footer-grid ul li a {
   font-size: 1em;
-  color: #CCAC16;
+  color: #ccac16;
   text-decoration: none;
   padding: 0.2em 0;
   display: inline-block;
 }
 .footer-grid ul li a:hover {
-  color:#899452;
+  color: #899452;
 }
 .contact-grid ul li span {
   width: 15px;
@@ -48,8 +48,8 @@
 }
 .copy {
   text-align: center;
-  background:#4b9643;
-  padding:1.5em 0;
+  background: #4b9643;
+  padding: 1.5em 0;
 }
 .copy p {
   color: #fff;
@@ -57,11 +57,11 @@
   margin-top: 10px;
 }
 .copy p a {
-  color:#EADB97;
+  color: #eadb97;
 }
-.copy p a:hover{
-  color:#fff;
-  border-bottom:3px double #EADB97;
+.copy p a:hover {
+  color: #fff;
+  border-bottom: 3px double #eadb97;
 }
 .copy-left {
   float: left;
@@ -74,29 +74,29 @@
   margin-right: 10px;
 }
 .social-icons ul li a.fb {
-  background: url('../../assets/iconsprite.png')no-repeat 10px 3px;
+  background: url("../../assets/iconsprite.png") no-repeat 10px 3px;
 }
-.social-icons ul li a.fb:hover{
-  background-color:#3b5998;
+.social-icons ul li a.fb:hover {
+  background-color: #3b5998;
 }
 .social-icons ul li a {
-  background: url('../../assets/iconsprite.png')no-repeat 3px -33px;
+  background: url("../../assets/iconsprite.png") no-repeat 3px -33px;
   display: block;
   width: 32px;
   height: 32px;
   transition: none;
 }
 .social-icons ul li a.pn {
-  background: url('../../assets/iconsprite.png')no-repeat 6px -108px;
+  background: url("../../assets/iconsprite.png") no-repeat 6px -108px;
 }
 .social-icons ul li a.pn:hover {
-  background-color:#cc2127;
+  background-color: #cc2127;
 }
 .social-icons ul li a.gg {
-  background: url('../../assets/iconsprite.png')no-repeat 6px -72px;
+  background: url("../../assets/iconsprite.png") no-repeat 6px -72px;
 }
 .social-icons ul li a.gg:hover {
-  background-color:#dd4b39;
+  background-color: #dd4b39;
 }
 .social-icons ul li a:hover {
   transform: rotatey(360deg);
@@ -104,11 +104,11 @@
   -o-transform: rotatey(360deg);
   -moz-transform: rotatey(360deg);
   -ms-transform: rotatey(360deg);
-  transition: .5s all;
+  transition: 0.5s all;
   -webkit-transition: 0.5s all ease;
   -moz-transition: 0.5s all ease;
   -o-transition: 0.5s all ease;
   -ms-transition: 0.5s all ease;
-  background-color:#55acee;
+  background-color: #55acee;
 }
 /*-- //footer --*/

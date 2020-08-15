@@ -52,17 +52,20 @@ export class ShoppingCartService {
       .snapshotChanges()
       .pipe(take(1))
       .subscribe((item: any) => {
-        if (item.payload.exists())
-          item$.update({
-            product: {
-              title: product.payload.val().title,
-              category: product.payload.val().category,
-              imageUrl: product.payload.val().imageUrl,
-              price: product.payload.val().price,
-            },
-            quantity: item.payload.exportVal().quantity + change,
-          });
-        else
+        if (item.payload.exists()) {
+          let quantity = item.payload.exportVal().quantity + change;
+          if (quantity === 0) item$.remove();
+          else
+            item$.update({
+              product: {
+                title: product.payload.val().title,
+                category: product.payload.val().category,
+                imageUrl: product.payload.val().imageUrl,
+                price: product.payload.val().price,
+              },
+              quantity: quantity,
+            });
+        } else
           item$.update({
             product: {
               title: product.payload.val().title,
@@ -75,11 +78,17 @@ export class ShoppingCartService {
       });
   }
 
+  async clearCart() {
+    let cartId = await this.getOrCreateCartId();
+    this.db.object('/shopping-carts/' + cartId + '/items').remove();
+  }
+
   //Get total items count in the cart
   getTotalItemCount(cart) {
     this.shoppingCartItemCount = 0;
-    for (let productId in cart.items)
-      this.shoppingCartItemCount += cart.items[productId].quantity;
+    if (cart)
+      for (let productId in cart.items)
+        this.shoppingCartItemCount += cart.items[productId].quantity;
     return this.shoppingCartItemCount;
   }
 
