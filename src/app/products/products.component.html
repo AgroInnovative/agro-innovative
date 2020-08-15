@@ -11,7 +11,6 @@
               <img
                 src="{{ p.payload.val().imageUrl }}"
                 class="card-img-top"
-                alt="..."
                 style="height: 20rem;"
               />
               <div class="card-body">
@@ -27,13 +26,37 @@
                   Product Description
                 </p>
               </div>
-              <div class="card-footer">
+              <div class="card-footer zero-padding">
                 <button
+                  *ngIf="getQuantity(p) === 0; else updateQuantity"
                   (click)="addToCart(p)"
-                  class="btn btn-success btn-block btn-card-footer"
+                  class="btn btn-success btn-block zero-margin"
                 >
                   Add to Cart
                 </button>
+                <ng-template #updateQuantity>
+                  <div class="row">
+                    <div class="col-2">
+                      <button
+                        (click)="removeFromCart(p)"
+                        class="btn btn-secondary btn-block zero-margin"
+                      >
+                        -
+                      </button>
+                    </div>
+                    <div class="col text-center">
+                      <b> {{ getQuantity(p) }} In Cart </b>
+                    </div>
+                    <div class="col-2">
+                      <button
+                        (click)="addToCart(p)"
+                        class="btn btn-secondary btn-block zero-margin"
+                      >
+                        +
+                      </button>
+                    </div>
+                  </div>
+                </ng-template>
               </div>
             </div>
           </div>

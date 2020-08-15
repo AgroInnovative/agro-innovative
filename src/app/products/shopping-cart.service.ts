@@ -14,7 +14,8 @@ export class ShoppingCartService {
     });
   }
 
-  private getCart(cartId: string) {
+  async getCart() {
+    let cartId = await this.getOrCreateCartId();
     return this.db.object('/shopping-carts/' + cartId);
   }
 
@@ -22,7 +23,7 @@ export class ShoppingCartService {
     return this.db.object('/shopping-carts/' + cartId + '/items/' + productId);
   }
 
-  private async getOrCreateCartId() {
+  private async getOrCreateCartId(): Promise<string> {
     let cartId = localStorage.getItem('cartId');
     if (cartId) return cartId;
 
@@ -31,7 +32,16 @@ export class ShoppingCartService {
     return result.key;
   }
 
+  //Add to cart and remove from cart
   async addToCart(product) {
+    this.updateItemQuentity(product, 1);
+  }
+
+  async removeFromCart(product) {
+    this.updateItemQuentity(product, -1);
+  }
+
+  private async updateItemQuentity(product, change: number) {
     let cartId = await this.getOrCreateCartId();
     let item$ = this.getItem(cartId, product.key);
 
@@ -47,7 +57,7 @@ export class ShoppingCartService {
               imageUrl: product.payload.val().imageUrl,
               price: product.payload.val().price,
             },
-            quantity: item.payload.exportVal().quantity + 1,
+            quantity: item.payload.exportVal().quantity + change,
           });
         else
           item$.update({

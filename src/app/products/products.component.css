@@ -1,10 +1,10 @@
 .card {
   margin-bottom: 30px;
 }
-.card-footer {
+.zero-padding {
   padding: 0 !important;
 }
 
-.btn-card-footer {
-  margin: 0;
+.zero-margin {
+  margin: 0 !important;
 }
