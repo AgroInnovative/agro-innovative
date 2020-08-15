@@ -50,6 +50,7 @@ import { UserDetailsFormComponent } from './farmers/user-details-form/user-detai
 import { UserDashboardComponent } from './farmers/user-dashboard/user-dashboard.component';
 import { UserDetailsComponent } from './farmers/user-details/user-details.component';
 import { ProductFilterComponent } from './products/product-filter/product-filter.component';
+import { ProductsNavBarComponent } from './products/products-nav-bar/products-nav-bar.component';
 
 @NgModule({
   declarations: [
@@ -75,6 +76,7 @@ import { ProductFilterComponent } from './products/product-filter/product-filter
     UserDashboardComponent,
     UserDetailsComponent,
     ProductFilterComponent,
+    ProductsNavBarComponent,
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebase),
