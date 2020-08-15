@@ -19,7 +19,7 @@ export class ContactComponent implements OnInit {
   constructor(private messageService: MessageService) {}
 
   email = 'hello@elzian.com';
-  officeAddress = 'ELZIAN (PVT) LTD, Mallavapittiya-Rambodagalla-Keppedigala Rd,  Kurunegala';
+  officeAddress = 'ELZIAN (PVT) LTD, Mallavapittiya, Keppedigala Rd,  Kurunegala';
   phoneNumber = '0768416637';
   ngOnInit(): void {}
 

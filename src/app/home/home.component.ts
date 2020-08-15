@@ -48,7 +48,7 @@ export class HomeComponent {
     {
       name: 'Sanjula Karunarathne',
       position: 'Director of Marketing',
-      avatar: 'assets/img/team/sanjula.jpg',
+      avatar: 'assets/img/team/sanjula.png',
     },
   ];
 }
