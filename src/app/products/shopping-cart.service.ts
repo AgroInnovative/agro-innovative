@@ -7,6 +7,8 @@ import { ShoppingCart } from './../models/shopping-cart';
   providedIn: 'root',
 })
 export class ShoppingCartService {
+  shoppingCartItemCount: number;
+
   constructor(private db: AngularFireDatabase) {}
 
   private create() {
@@ -71,5 +73,18 @@ export class ShoppingCartService {
             quantity: 1,
           });
       });
+  }
+
+  //Get total items count in the cart
+  getTotalItemCount(cart) {
+    this.shoppingCartItemCount = 0;
+    for (let productId in cart.items)
+      this.shoppingCartItemCount += cart.items[productId].quantity;
+    return this.shoppingCartItemCount;
+  }
+
+  //Get all the product IDs
+  getProductIds(cart) {
+    return Object.keys(cart.items);
   }
 }

@@ -1,1 +1,21 @@
-<p>shopping-cart works!</p>
+<div class="container">
+  <h1>Shooping Cart</h1>
+  <p>You have {{ CartItemCount }} items in your shopping cart</p>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Product</th>
+        <th>Unit Price</th>
+        <th>Quantity</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let productId of productIds">
+        <td>{{ cart.items[productId].product.title }}</td>
+        <td>{{ cart.items[productId].product.price }}</td>
+        <td>{{ cart.items[productId].quantity }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
