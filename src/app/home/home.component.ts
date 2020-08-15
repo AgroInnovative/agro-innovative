@@ -14,7 +14,7 @@ import {
   animations: [fade, slide],
 })
 export class HomeComponent {
-  companyName = 'PureAgro';
+  companyName = 'ELZIAN AGRO';
   companyLogo = 'assets/img/logo.png';
   joinEcoSystemImg = 'assets/img/ecosystem.png';
   ecoSystemImg = [

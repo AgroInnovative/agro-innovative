@@ -14,7 +14,7 @@ import {
   animations: [fade, slide],
 })
 export class PartnersComponent implements OnInit {
-  companyName = 'PureAgro';
+  companyName = 'ELZIAN AGRO';
   joinEcoSystemImg = 'assets/img/ecosystem.png';
   partners = [
     {

@@ -14,7 +14,7 @@ import {
   animations: [fade, slide],
 })
 export class AboutComponent implements OnInit {
-  companyName = 'PureAgro';
+  companyName = 'ELZIAN AGRO';
   companyLogo = 'assets/img/logo.png';
   constructor() {}
 
