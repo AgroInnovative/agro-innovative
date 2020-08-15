@@ -27,27 +27,27 @@ export class HomeComponent {
   teamMembers = [
     {
       name: 'Lilan Udayanga',
-      position: 'Management Undergraduate',
+      position: 'Director of Finance',
       avatar: 'assets/img/team/lilan.png',
     },
     {
       name: 'Mihindu Ranasinghe',
-      position: 'Software Engineering Undergraduate',
+      position: 'Director of Software Development',
       avatar: 'assets/img/team/mihindu.png',
     },
     {
       name: 'Pankajan Satkunam',
-      position: 'Software Engineering Undergraduate',
+      position: 'Director of Research and Development',
       avatar: 'assets/img/team/pankajan.png',
     },
     {
       name: 'Zeena Youhan',
-      position: 'Software Engineering Undergraduate',
+      position: 'Director of Public Relations',
       avatar: 'assets/img/team/zeena.png',
     },
     {
       name: 'Sanjula Karunarathne',
-      position: 'Software Engineering Undergraduate',
+      position: 'Director of Marketing',
       avatar: 'assets/img/team/sanjula.jpg',
     },
   ];
