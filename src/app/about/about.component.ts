@@ -14,8 +14,8 @@ import {
   animations: [fade, slide],
 })
 export class AboutComponent implements OnInit {
-  companyName = 'PureAgro';
-  companyLogo = 'assets/img/logo.png';
+  companyName = 'ELZIAN AGRO';
+  companyLogo = 'assets/img/PAS_AI.png';
   constructor() {}
 
   ngOnInit(): void {}

@@ -29,11 +29,8 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'shopping-cart', component: ShoppingCartComponent },
   { path: 'login', component: LoginComponent },
-
   {
-    path: 'products',
-    component: ProductsComponent,
-    //canActivate: [AuthGuard]
+    path: 'products', component: ProductsComponent, // canActivate: [AuthGuard]
   },
   { path: 'check-out', component: CheckOutComponent, canActivate: [AuthGuard] },
   {
@@ -42,8 +39,7 @@ const routes: Routes = [
     canActivate: [AuthGuard],
   },
   { path: 'my/orders', component: MyOrdersComponent, canActivate: [AuthGuard] },
-
-  //Admins
+  // Admins
   {
     path: 'admin/products/new',
     component: ProductFormComponent,
