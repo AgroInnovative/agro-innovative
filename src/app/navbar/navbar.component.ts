@@ -8,6 +8,7 @@ import { AppUser } from 'src/app/common/models/app-user';
   styleUrls: ['./navbar.component.css'],
 })
 export class NavbarComponent {
+  navBarLogo = 'assets/img/main_logo_PNG.png';
   appUser: AppUser;
 
   constructor(public auth: AuthService) {
