@@ -7,7 +7,7 @@ import {
   slideBounceOut,
   bounceOutLeftAnimation,
   fadeInAnimation,
-} from './../common/animations';
+} from '../../common/animations';
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',

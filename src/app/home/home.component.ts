@@ -38,7 +38,7 @@ export class HomeComponent {
     {
       name: 'Pankajan Satkunam',
       position: 'Director of Research and Development',
-      avatar: 'assets/img/team/pankajan.png',
+      avatar: 'assets/img/team/Pankajan.png',
     },
     {
       name: 'Zeena Youhan',
