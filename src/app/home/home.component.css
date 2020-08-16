@@ -42,16 +42,6 @@ h1 {
   width: 30vw;
 }
 
-/* team */
-.team-div {
-  background: #e5e5e5;
-}
-.avatar {
-  width: 80px;
-  height: 80px;
-  border-radius: 100%;
-}
-
 /* 
  config 
 @mixin mediaSm {

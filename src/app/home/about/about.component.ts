@@ -5,7 +5,7 @@ import {
   slideBounceOut,
   bounceOutLeftAnimation,
   fadeInAnimation,
-} from '../common/animations';
+} from '../../common/animations';
 
 @Component({
   selector: 'about',

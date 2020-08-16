@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { ContactComponent } from './other/contact/contact.component';
-import { AboutComponent } from './about/about.component';
-import { PartnersComponent } from './partners/partners.component';
+import { ContactComponent } from './home/contact/contact.component';
+import { AboutComponent } from './home/about/about.component';
+import { PartnersComponent } from './home/partners/partners.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { LoginComponent } from './auth/login/login.component';
 import { NotFoundComponent } from './other/not-found/not-found.component';

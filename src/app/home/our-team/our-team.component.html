@@ -1,0 +1,29 @@
+<div class="position-relative overflow-hidden py-5 p-md-5 text-center team-div">
+  <div class="col-md-5 mx-auto my-5">
+    <h2>
+      DIRECTOR BOARD
+    </h2>
+  </div>
+  <div class="row mx-auto p-5">
+    <div
+      *ngFor="let member of teamMembers"
+      class="media col-md-6 col-sm-6 py-2"
+    >
+      <div class="media-left">
+        <img
+          src="{{ member.avatar }}"
+          class="avatar mr-3"
+          alt="{{ member.name }}"
+        />
+      </div>
+      <div class="media-body">
+        <h5 class="mt-0 media-heading">
+          <a>
+            {{ member.name }}
+          </a>
+        </h5>
+        <p>{{ member.position }}</p>
+      </div>
+    </div>
+  </div>
+</div>

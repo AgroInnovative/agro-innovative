@@ -1,0 +1,11 @@
+img {
+  width: 100%;
+  border-radius: 25px;
+  height: 30vh;
+  width: 100%;
+  padding: 10px;
+}
+
+.weather-section-div {
+  background: rgb(163, 230, 163);
+}

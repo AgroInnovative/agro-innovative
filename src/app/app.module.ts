@@ -18,17 +18,17 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { ProductsComponent } from './products/products.component';
 import { ResearchsComponent } from './other/researchs/researchs.component';
-import { ContactComponent } from './other/contact/contact.component';
+import { ContactComponent } from './home/contact/contact.component';
 import { FooterComponent } from './other/footer/footer.component';
 import { NotFoundComponent } from './other/not-found/not-found.component';
 
 import { FormsModule } from '@angular/forms';
 import { CustomFormsModule } from 'ng2-validation';
-import { PartnersComponent } from './partners/partners.component';
-import { AboutComponent } from './about/about.component';
+import { PartnersComponent } from './home/partners/partners.component';
+import { AboutComponent } from './home/about/about.component';
 import { LoginComponent } from './auth/login/login.component';
 
-import { MessageService } from './other/contact/message.service';
+import { MessageService } from './home/contact/message.service';
 import { AuthService } from './auth/auth.service';
 import { AuthGuard } from './auth/auth-guard.service';
 import { UserService } from './user.service';
@@ -53,6 +53,10 @@ import { UserDetailsComponent } from './farmers/user-details/user-details.compon
 import { ProductFilterComponent } from './products/product-filter/product-filter.component';
 import { ProductsNavBarComponent } from './products/products-nav-bar/products-nav-bar.component';
 import { ShoppingCartSummaryComponent } from './check-out/shopping-cart-summary/shopping-cart-summary.component';
+import { WeatherWidgetComponent } from './other/weather-widget/weather-widget.component';
+import { OurTeamComponent } from './home/our-team/our-team.component';
+import { WeatherSectionComponent } from './home/weather-section/weather-section.component';
+import { DashboardSectionComponent } from './home/dashboard-section/dashboard-section.component';
 
 @NgModule({
   declarations: [
@@ -80,6 +84,10 @@ import { ShoppingCartSummaryComponent } from './check-out/shopping-cart-summary/
     ProductFilterComponent,
     ProductsNavBarComponent,
     ShoppingCartSummaryComponent,
+    WeatherWidgetComponent,
+    OurTeamComponent,
+    WeatherSectionComponent,
+    DashboardSectionComponent,
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebase),
