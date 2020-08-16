@@ -38,6 +38,7 @@ import { ProductService } from './admin/product.service';
 import { DistrictService } from './farmers/user-details-form/district.service';
 import { CropsService } from './farmers/user-details-form/crops.service';
 import { ShoppingCartService } from './products/shopping-cart.service';
+import { OrderService } from './check-out/order.service';
 
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { CheckOutComponent } from './check-out/check-out.component';
@@ -51,6 +52,7 @@ import { UserDashboardComponent } from './farmers/user-dashboard/user-dashboard.
 import { UserDetailsComponent } from './farmers/user-details/user-details.component';
 import { ProductFilterComponent } from './products/product-filter/product-filter.component';
 import { ProductsNavBarComponent } from './products/products-nav-bar/products-nav-bar.component';
+import { ShoppingCartSummaryComponent } from './check-out/shopping-cart-summary/shopping-cart-summary.component';
 
 @NgModule({
   declarations: [
@@ -77,6 +79,7 @@ import { ProductsNavBarComponent } from './products/products-nav-bar/products-na
     UserDetailsComponent,
     ProductFilterComponent,
     ProductsNavBarComponent,
+    ShoppingCartSummaryComponent,
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebase),
@@ -102,6 +105,7 @@ import { ProductsNavBarComponent } from './products/products-nav-bar/products-na
     DistrictService,
     CropsService,
     ShoppingCartService,
+    OrderService,
   ],
   bootstrap: [AppComponent],
 })
