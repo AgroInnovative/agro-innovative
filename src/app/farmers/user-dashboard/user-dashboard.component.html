@@ -1,6 +1,67 @@
 <div class="container">
-  {{ uid }}
+  <!-- {{ uid }} -->
   <h1>Farmer Dashboard</h1>
-  <weather-widget></weather-widget>
+  <div>
+    <div class="card p-3" style="min-height: 40vh;">
+      <h4>
+        Alert Section / Predictions
+      </h4>
+      <div class="card p-3" style="min-height: 30vh; border-radius: 25px;">
+        <h6>
+          Currently You dont have any predictions. Please provide below
+          information then we will be able to provide accurate predictions in
+          this area
+          <button
+            class="btn btn-success btn-sm"
+            type="button"
+            routerLink="edit-profile"
+          >
+            Proide Info
+          </button>
+        </h6>
+      </div>
+    </div>
+
+    <div class="card p-3" style="min-height: 40vh;">
+      <h4>
+        Weather Forecasting based on your information
+      </h4>
+      <div class="card p-3" style="min-height: 30vh; border-radius: 25px;">
+        <h6>
+          Currently You dont have any predictions. Please provide below
+          information then we will be able to provide accurate predictions in
+          this area
+          <button
+            class="btn btn-success btn-sm"
+            type="button"
+            routerLink="edit-profile"
+          >
+            Proide Info
+          </button>
+        </h6>
+        <weather-widget></weather-widget>
+      </div>
+    </div>
+
+    <div class="card p-3" style="min-height: 40vh;">
+      <h4>
+        Charts and satellite Imagery
+      </h4>
+      <div class="card p-3" style="min-height: 30vh; border-radius: 25px;">
+        <h6>
+          Currently You dont have any predictions. Please provide below
+          information then we will be able to provide accurate predictions in
+          this area
+          <button
+            class="btn btn-success btn-sm"
+            type="button"
+            routerLink="edit-profile"
+          >
+            Proide Info
+          </button>
+        </h6>
+      </div>
+    </div>
+  </div>
   <user-details></user-details>
 </div>
