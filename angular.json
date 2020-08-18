@@ -26,7 +26,13 @@
               "src/styles.css",
               "node_modules/animate.css/animate.min.css"
             ],
-            "scripts": ["src/font-awesome/all.js"]
+            "scripts": [
+              "src/font-awesome/all.js",
+              "src/assets/js/jquery-1.11.0.min.js",
+              "src/assets/js/jquery.sudoSlider.min.js",
+              "src/assets/js/global.js",
+              "src/assets/js/modernizr.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -68,7 +74,20 @@
             "production": {
               "browserTarget": "AgroInnovative:build:production"
             }
-          }
+          },
+          "styles": [
+            "node_modules/bootstrap/dist/css/bootstrap.min.css",
+            "node_modules/font-awesome/css/font-awesome.css",
+            "src/styles.css",
+            "node_modules/animate.css/animate.min.css"
+          ],
+          "scripts": [
+            "src/font-awesome/all.js",
+            "src/assets/js/jquery-1.11.0.min.js",
+            "src/assets/js/jquery.sudoSlider.min.js",
+            "src/assets/js/global.js",
+            "src/assets/js/modernizr.js"
+          ]
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",

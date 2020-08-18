@@ -1,7 +1,10 @@
 <!-- <nav class="site-header navbar navbar-expand-lg navbar-dark sticky-top"> -->
 <nav class="site-header navbar navbar-expand-lg navbar-dark">
   <div class="container navbar-container">
-    <a class="navbar-brand py-2 d-none d-md-inline-block" routerLink="/">
+    <a
+      class="navbar-brand py-2 d-none d-md-inline-block"
+      href="https://elzian.com/"
+    >
       <img src="{{ navBarLogo }}" alt="logo" height="50px" />
     </a>
     <button
@@ -119,13 +122,13 @@
             class="dropdown-menu"
             aria-labelledby="dropdown01"
           >
-            <a ngbDropdownItem class="dropdown-item" routerLink="/products">
+            <a ngbDropdownItem class="dropdown-item" routerLink="/dashboard">
               Agro Dashboard
             </a>
             <a ngbDropdownItem class="dropdown-item" routerLink="/edit-profile">
               Provide info
             </a>
-            <a ngbDropdownItem class="dropdown-item" routerLink="#">
+            <a ngbDropdownItem class="dropdown-item" href="products">
               Buy Agro Products
             </a>
             <a
