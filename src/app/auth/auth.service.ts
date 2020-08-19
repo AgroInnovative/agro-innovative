@@ -45,7 +45,7 @@ export class AuthService {
       new firebase.auth.GoogleAuthProvider()
     );
     // this.afAuth.auth.signInWithRedirect(new firebase.auth.GoogleAuthProvider());
-    //this.router.navigate(['/']);
+    this.router.navigate(['/edit-profile']);
   }
 
   async logout() {
