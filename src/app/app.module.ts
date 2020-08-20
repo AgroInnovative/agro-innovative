@@ -39,6 +39,7 @@ import { DistrictService } from './farmers/user-details-form/district.service';
 import { CropsService } from './farmers/user-details-form/crops.service';
 import { ShoppingCartService } from './products/shopping-cart.service';
 import { OrderService } from './check-out/order.service';
+import { WeatherService } from './other/weather-widget/weather.service';
 
 import { ShoppingCartComponent } from './products/shopping-cart/shopping-cart.component';
 import { CheckOutComponent } from './check-out/check-out.component';
@@ -116,6 +117,7 @@ import { ProductSectionComponent } from './home/product-section/product-section.
     CropsService,
     ShoppingCartService,
     OrderService,
+    WeatherService,
   ],
   bootstrap: [AppComponent],
 })

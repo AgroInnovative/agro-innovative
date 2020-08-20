@@ -1,29 +1,176 @@
-<div class="container">
-  <div class="divWeatherMain">
-    <div *ngIf="weatherData.isDay" class="weatherWidgetRow">
-      <i class="fas fa-3x fa-sun sun"></i>
-    </div>
-    <div *ngIf="!weatherData.isDay" class="weatherWidgetRow">
-      <i class="fas fa-3x fa-moon moon"></i>
-    </div>
+<h4>
+  Weather Forecasting based on your information (Personalized For you)
+</h4>
+<div
+  *ngIf="!appUser.city"
+  class="card p-3"
+  style="min-height: 10vh; border-radius: 25px;"
+>
+  <h6>
+    Currently You dont have any predictions. Please provide below information
+    then we will be able to provide accurate predictions in this area
+    <button
+      class="btn btn-success btn-sm"
+      type="button"
+      routerLink="../edit-profile"
+    >
+      Proide Info
+    </button>
+  </h6>
+</div>
+<div class="container" *ngIf="appUser.city">
+  <div class="row">
+    <!-- Current weatherData -->
+    <div class="col-md col-sm-12 py-5">
+      <h4>Today Weather</h4>
+      <div class="divWeatherMain py-5 my-3">
+        <div *ngIf="weatherData.list[0].isDay" class="weatherWidgetRow">
+          <i class="fas fa-3x fa-sun sun"></i>
+        </div>
+        <div *ngIf="!weatherData.list[0].isDay" class="weatherWidgetRow">
+          <i class="fas fa-3x fa-moon moon"></i>
+        </div>
 
-    <div class="weatherWidgetRow cloudDiv">
-      <i class="fas fa-3x fa-cloud cloud"></i>
+        <div class="weatherWidgetRow cloudDiv">
+          <i class="fas fa-3x fa-cloud cloud"> </i>
+        </div>
+        <div class="weatherWidgetRow" style="font-size: 32px; margin-top: 5px;">
+          {{ weatherData.list[today].temp_celcius }}°C
+        </div>
+        <div class="weatherWidgetRow" style="font-size: 12px;">
+          {{ weatherData.list[today].temp_min }}°C /
+          {{ weatherData.list[today].temp_max }}°C
+        </div>
+        <div class="weatherWidgetRow" style="font-size: 12px;">
+          Feels Like : {{ weatherData.list[today].temp_feels_like }}
+        </div>
+        <div
+          class="weatherWidgetRow"
+          style="font-size: 25px; margin-top: 10px;"
+        >
+          {{ appUser.city }}
+        </div>
+        <div class="weatherWidgetRow" style="font-size: 12px;">
+          Humidity : {{ weatherData.list[today].main.humidity }} %
+        </div>
+        <div class="weatherWidgetRow" style="font-size: 12px;">
+          Pressure : {{ weatherData.list[today].main.pressure }}
+        </div>
+        <div class="weatherWidgetRow" style="font-size: 12px;">
+          Visibility : {{ weatherData.list[today].visibility }}
+        </div>
+        <div class="weatherWidgetRow" style="font-size: 12px;">
+          Wind Speed : {{ weatherData.list[today].wind.speed }}
+        </div>
+      </div>
     </div>
-    <div class="weatherWidgetRow" style="font-size: 32px; margin-top: 5px;">
-      {{ weatherData.temp_celcius }}°C
+    <!-- Forecasted weatherData -->
+    <div class="col-md col-sm-12 py-5">
+      <h4>Forecasted Weather For 5 Days After</h4>
+      <div class="divWeatherMain py-5 my-3">
+        <div *ngIf="weatherData.list[0].isDay" class="weatherWidgetRow">
+          <i class="fas fa-3x fa-sun sun"></i>
+        </div>
+        <div *ngIf="!weatherData.list[0].isDay" class="weatherWidgetRow">
+          <i class="fas fa-3x fa-moon moon"></i>
+        </div>
+
+        <div class="weatherWidgetRow cloudDiv">
+          <i class="fas fa-3x fa-cloud cloud"> </i>
+        </div>
+        <div class="weatherWidgetRow" style="font-size: 32px; margin-top: 5px;">
+          {{ weatherData.list[day5].temp_celcius }}°C
+        </div>
+        <div class="weatherWidgetRow" style="font-size: 12px;">
+          {{ weatherData.list[day5].temp_min }}°C /
+          {{ weatherData.list[day5].temp_max }}°C
+        </div>
+        <div class="weatherWidgetRow" style="font-size: 12px;">
+          Feels Like : {{ weatherData.list[day5].temp_feels_like }}
+        </div>
+        <div
+          class="weatherWidgetRow"
+          style="font-size: 25px; margin-top: 10px;"
+        >
+          {{ appUser.city }}
+        </div>
+        <div class="weatherWidgetRow" style="font-size: 12px;">
+          Humidity : {{ weatherData.list[day5].main.humidity }} %
+        </div>
+        <div class="weatherWidgetRow" style="font-size: 12px;">
+          Pressure : {{ weatherData.list[day5].main.pressure }}
+        </div>
+        <div class="weatherWidgetRow" style="font-size: 12px;">
+          Visibility : {{ weatherData.list[day5].visibility }}
+        </div>
+        <div class="weatherWidgetRow" style="font-size: 12px;">
+          Wind Speed : {{ weatherData.list[day5].wind.speed }}
+        </div>
+      </div>
     </div>
-    <div class="weatherWidgetRow" style="font-size: 12px;">
-      {{ weatherData.temp_min }}°C / {{ weatherData.temp_max }}°C
-    </div>
-    <div class="weatherWidgetRow" style="font-size: 12px;">
-      Feels Like : {{ weatherData.temp_feels_like }}
-    </div>
-    <div class="weatherWidgetRow" style="font-size: 25px; margin-top: 10px;">
-      {{ weatherData.name }}
-    </div>
-    <div class="weatherWidgetRow" style="font-size: 12px;">
-      Humidity : {{ weatherData.main.humidity }} %
-    </div>
+  </div>
+
+  <!-- all forecasting -->
+  <hr />
+  <div style="text-align: center;">
+    <h4 py-3>
+      Forecasted Weather For next 5 days hourly in your area
+    </h4>
+    <button (click)="moreWeather()" class="btn {{ btnColor }}">
+      {{ seeMoreButtonText }}
+    </button>
+  </div>
+  <div class="row" *ngIf="isMore">
+    <ng-container *ngFor="let i of weatherData.list">
+      <div class="divWeatherMainAllForecasting py-5 col-lg-3 col-md-4 col-sm-6">
+        <div class="weatherWidgetRow" style="font-size: 12px;">
+          {{ i.dt_txt }}
+        </div>
+        <div *ngIf="i.isDay" class="weatherWidgetRow">
+          <i class="fas fa-3x fa-sun sun"></i>
+        </div>
+        <div *ngIf="!i.isDay" class="weatherWidgetRow">
+          <i class="fas fa-3x fa-moon moon"></i>
+        </div>
+
+        <div class="weatherWidgetRow cloudDiv">
+          <i class="fas fa-3x fa-cloud cloud"> </i>
+        </div>
+        <div class="weatherWidgetRow" style="font-size: 32px; margin-top: 5px;">
+          {{ i.temp_celcius }}°C
+        </div>
+        <div class="weatherWidgetRow" style="font-size: 12px;">
+          {{ i.temp_min }}°C / {{ i.temp_max }}°C
+        </div>
+        <div class="weatherWidgetRow" style="font-size: 12px;">
+          Feels Like : {{ i.temp_feels_like }}
+        </div>
+        <!-- <div
+          class="weatherWidgetRow"
+          style="font-size: 25px; margin-top: 10px;"
+        >
+          {{ appUser.city }}
+        </div> -->
+        <div class="weatherWidgetRow" style="font-size: 12px;">
+          Humidity : {{ i.main.humidity }} %
+        </div>
+        <div class="weatherWidgetRow" style="font-size: 12px;">
+          Pressure : {{ i.main.pressure }}
+        </div>
+        <div class="weatherWidgetRow" style="font-size: 12px;">
+          Visibility : {{ i.visibility }}
+        </div>
+        <div class="weatherWidgetRow" style="font-size: 12px;">
+          Wind Speed : {{ i.wind.speed }}
+        </div>
+      </div>
+    </ng-container>
+
+    <h4 py-3>
+      Collapse Forecasted Weather For next 5 days
+      <button (click)="moreWeather()" class="btn {{ btnColor }}">
+        {{ seeMoreButtonText }}
+      </button>
+    </h4>
   </div>
 </div>

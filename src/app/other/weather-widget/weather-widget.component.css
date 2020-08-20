@@ -1,8 +1,8 @@
 .divWeatherMain {
   display: block;
   border-radius: 10px;
-  width: 200px;
-  height: 220px;
+  width: 100%;
+  height: 100%;
   background-attachment: black;
   background: linear-gradient(
     180deg,
@@ -14,9 +14,33 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.divWeatherMainAllForecasting {
+  display: block;
+  border-radius: 10px;
+  margin: 0.01px;
+  margin-top: 1px;
+  width: 100%;
+  height: 100%;
+  background-attachment: black;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(8, 7, 42, 1) 50%
+  );
+
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.divWeatherMainAllForecasting > .weatherWidgetRow {
+  display: block;
+  margin: 2px auto;
+  width: fit-content;
+}
+
 .weatherWidgetRow {
   display: block;
-  margin: 0 auto;
+  margin: 5px auto;
   width: fit-content;
 }
 

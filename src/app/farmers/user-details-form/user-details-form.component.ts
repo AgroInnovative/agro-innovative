@@ -46,11 +46,13 @@ export class UserDetailsFormComponent implements OnInit {
     }
   }
 
-  save(user) {
-    if (this.uid) this.userService.update(this.uid, user);
+  async save(user) {
+    if (this.uid) await this.userService.update(this.uid, user);
     else alert('User not found');
     //console.log(user);
-    this.router.navigate(['/dashboard']);
+    this.router.navigate(['/dashboard']).then(() => {
+      window.location.reload();
+    });
   }
 
   ngOnInit(): void {}

@@ -7,6 +7,8 @@ import { AppUser } from 'src/app/common/models/app-user';
   providedIn: 'root',
 })
 export class UserService {
+  city = 'colombo'; //default
+
   constructor(private db: AngularFireDatabase) {}
 
   save(user: firebase.User) {
@@ -30,6 +32,12 @@ export class UserService {
   }
 
   update(userId, user) {
+    console.log(user.city);
+    this.city = user.city;
     return this.db.object('/users/' + userId).update(user);
+  }
+
+  updateWeather(userId, weather) {
+    return this.db.object('/users/' + userId).update(weather);
   }
 }
