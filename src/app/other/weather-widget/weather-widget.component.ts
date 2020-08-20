@@ -46,7 +46,6 @@ export class WeatherWidgetComponent implements OnInit {
     this.auth.appUser$.subscribe((appUser) => (this.appUser = appUser));
     // console.log(auth.userId);
     this.uid = this.auth.userId;
-    this.uid = this.auth.userId;
     this.city = this.userService.city;
 
     this.weatherData = {
