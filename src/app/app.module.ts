@@ -59,6 +59,7 @@ import { OurTeamComponent } from './home/our-team/our-team.component';
 import { WeatherSectionComponent } from './home/weather-section/weather-section.component';
 import { DashboardSectionComponent } from './home/dashboard-section/dashboard-section.component';
 import { ProductSectionComponent } from './home/product-section/product-section.component';
+import { MachineLearningPredictionComponent } from './other/machine-learning-prediction/machine-learning-prediction.component';
 
 @NgModule({
   declarations: [
@@ -91,6 +92,7 @@ import { ProductSectionComponent } from './home/product-section/product-section.
     WeatherSectionComponent,
     DashboardSectionComponent,
     ProductSectionComponent,
+    MachineLearningPredictionComponent,
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebase),

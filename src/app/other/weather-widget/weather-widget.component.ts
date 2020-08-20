@@ -142,9 +142,9 @@ export class WeatherWidgetComponent implements OnInit {
       );
     else alert('User not found');
     // window.location.href = 'https://elzian.com';
-    window.location.href =
-      'https://elzianagro.herokuapp.com/pestPrediction/' + this.uid;
-    event.preventDefault();
+    // window.location.href =
+    //   'https://elzianagro.herokuapp.com/pestPrediction/' + this.uid;
+    // event.preventDefault();
 
     // this.router.navigate(['/edit-profile']);
     // this.router.navigateByUrl('elzian.com');
