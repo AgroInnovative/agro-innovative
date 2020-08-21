@@ -3,6 +3,7 @@ import { AuthService } from 'src/app/auth/auth.service';
 import { UserService } from 'src/app/user.service';
 import { AppUser } from 'src/app/common/models/app-user';
 import { Router } from '@angular/router';
+import { take } from 'rxjs/operators';
 
 @Component({
   selector: 'weather-widget',
@@ -37,15 +38,13 @@ export class WeatherWidgetComponent implements OnInit {
     public auth: AuthService,
     private userService: UserService,
     private router: Router
-  ) {}
-
-  ngOnInit(): void {
-    // window.location.href = 'dashboard';
-    // event.preventDefault();
-
+  ) {
     this.auth.appUser$.subscribe((appUser) => (this.appUser = appUser));
     // console.log(auth.userId);
     this.uid = this.auth.userId;
+  }
+
+  ngOnInit(): void {
     this.city = this.userService.city;
 
     this.weatherData = {

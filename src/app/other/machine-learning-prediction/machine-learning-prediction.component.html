@@ -1,4 +1,66 @@
-<p>machine-learning-prediction works!</p>
-<button class="btn btn-danger" (click)="generatePredictions()">
-  Generate Machine Learning Predictions
-</button>
+<h4 class="card-title">
+  Alert Section / Pest Attack Predictions
+</h4>
+<div class="card p-3 bg-dark text-white" style="border-radius: 25px;">
+  <h3>
+    {{ appUser.name }} ! Welcome to our Advanced Machine Learning based Elzian
+    Agro Farmer Dashboard
+  </h3>
+  <!-- <img src="..." class="card-img" alt="..." /> -->
+  <div
+    style="text-align: center;"
+    *ngIf="!appUser.ML_generated_pest_prediction || !appUser.city"
+    class="pt-3"
+  >
+    <h6 class="card-text">
+      Currently You dont have any predictions. Please provide below information
+      then we will be able to provide accurate predictions in this area
+    </h6>
+    <button
+      class="btn btn-success btn-sm"
+      type="button"
+      routerLink="../edit-profile"
+    >
+      Provide Info
+    </button>
+    <h6>
+      After complete submitting data Press the button below to generate
+      prediction
+    </h6>
+  </div>
+
+  <div
+    class="card-text p-3"
+    *ngIf="appUser.ML_generated_pest_prediction && appUser.city"
+  >
+    Location : <b> {{ appUser.city }} </b><br />
+    ML model Predicted Pest for your cultivation:
+    <b> {{ appUser.ML_generated_pest_prediction }}</b>
+    <hr />
+    <div>
+      <h4><i> Description About the Pest Disease: </i></h4>
+      According to the information you have provided about your cultivation
+      aria, Our most intelligent and accurate Machine Learning Model we have
+      trained has identified that
+      <b> {{ appUser.ML_generated_pest_prediction }}</b>
+      Disease will affect in your cultivation withing next 5-6 days. We have
+      used your crops details, location data and forecasted weather pattern
+      according to your area to get this prediction. So pre prepared to face
+      <b> {{ appUser.ML_generated_pest_prediction }}</b> and protect your hard
+      earned harvest.
+    </div>
+    <hr />
+    <div>
+      <h4><i> Recommended Actions: </i></h4>
+      Here are some recommended actions that you can take to ...
+    </div>
+  </div>
+
+  <button
+    class="btn btn-danger"
+    (click)="generatePredictions()"
+    *ngIf="appUser.city"
+  >
+    Generate Machine Learning Predictions
+  </button>
+</div>

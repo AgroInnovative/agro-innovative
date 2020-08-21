@@ -12,6 +12,10 @@ export class UserDashboardComponent implements OnInit {
   appUser: AppUser;
   uid;
 
+  weatherImage2 = 'assets/img/agro-dashboard/agro-dashboard1.jpg';
+  dashboardImage3 = 'assets/img/agro-farm.png';
+  dashboardImage4 = 'assets/img/agro-dashboard/agro-dashboard.png';
+
   constructor(public auth: AuthService, private userService: UserService) {
     auth.appUser$.subscribe((appUser) => (this.appUser = appUser));
     // console.log(auth.userId);
