@@ -31,7 +31,7 @@
 
   <div
     class="card-text p-3"
-    *ngIf="appUser.ML_generated_pest_prediction == 'pest-C' && appUser.city"
+    *ngIf="appUser.ML_generated_pest_prediction && appUser.city"
   >
     Location : <b> {{ appUser.city }} </b><br />
     ML model Predicted Pest for your cultivation:
