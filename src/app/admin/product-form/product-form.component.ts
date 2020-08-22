@@ -3,6 +3,7 @@ import { CategoryService } from 'src/app/admin/product-form/category.service';
 import { ProductService } from '../product.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { take } from 'rxjs/operators';
+import { Product } from './../../common/models/product';
 
 @Component({
   selector: 'app-product-form',
@@ -11,8 +12,10 @@ import { take } from 'rxjs/operators';
 })
 export class ProductFormComponent implements OnInit {
   categories$;
-  //product = {}; //Use this to work add new Product properly.
-  product; //Use this while developing to remove some errors
+  product: any = { $key: '', title: '', price: '', category: '', imageUrl: '' }; //Use this to work add new Product properly.
+  // product:Product = {}; //Use this to work add new Product properly.
+  // product=new Product()
+  // product; //Use this while developing to remove some errors
   id;
 
   constructor(

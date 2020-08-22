@@ -14,6 +14,7 @@ export class UserDashboardComponent implements OnInit {
 
   weatherImage1 = 'assets/img/weather/weather1.JPG';
   weatherImage2 = 'assets/img/agro-dashboard/agro-dashboard1.jpg';
+  weatherImage4 = 'assets/img/agro-dashboard/agro-dashboard-2.png';
   dashboardImage3 = 'assets/img/agro-farm.png';
   dashboardImage4 = 'assets/img/agro-dashboard/agro-dashboard.png';
 

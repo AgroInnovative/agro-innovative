@@ -31,7 +31,7 @@
 
   <div
     class="card-text p-3"
-    *ngIf="appUser.ML_generated_pest_prediction && appUser.city"
+    *ngIf="appUser.ML_generated_pest_prediction == 'pest-C' && appUser.city"
   >
     Location : <b> {{ appUser.city }} </b><br />
     ML model Predicted Pest for your cultivation:
@@ -40,7 +40,7 @@
     <div>
       <h4><i> Description About the Pest Disease: </i></h4>
       According to the information you have provided about your cultivation
-      aria, Our most intelligent and accurate Machine Learning Model we have
+      area, Our most intelligent and accurate Machine Learning Model we have
       trained has identified that
       <b> {{ appUser.ML_generated_pest_prediction }}</b>
       Disease will affect in your cultivation withing next 5-6 days. We have
