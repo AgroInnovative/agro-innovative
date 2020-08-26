@@ -49,21 +49,21 @@ export class PartnersComponent implements OnInit {
       // logo: 'assets/img/partners/agr-department.png',
       logo: 'assets/img/partners/htcr.JPG',
     },
-    {
-      partnerName: 'Generation Unlimited',
-      // logo: 'assets/img/partners/agr-department.png',
-      logo: 'assets/img/partners/genu.jpg',
-    },
-    {
-      partnerName: 'UNDP',
-      // logo: 'assets/img/partners/agr-department.png',
-      logo: 'assets/img/partners/undp.jpg',
-    },
-    {
-      partnerName: 'UNICEF',
-      // logo: 'assets/img/partners/agr-department.png',
-      logo: 'assets/img/partners/unicef.jpg',
-    },
+    // {
+    //   partnerName: 'Generation Unlimited',
+    //   // logo: 'assets/img/partners/agr-department.png',
+    //   logo: 'assets/img/partners/genu.jpg',
+    // },
+    // {
+    //   partnerName: 'UNDP',
+    //   // logo: 'assets/img/partners/agr-department.png',
+    //   logo: 'assets/img/partners/undp.jpg',
+    // },
+    // {
+    //   partnerName: 'UNICEF',
+    //   // logo: 'assets/img/partners/agr-department.png',
+    //   logo: 'assets/img/partners/unicef.jpg',
+    // },
   ];
   constructor() {}
 
