@@ -73,7 +73,7 @@ export class AuthService {
       email,
       password
     );
-    this.router.navigate(['admin/list']);
+    this.router.navigate(['/edit-profile']);
   }
 
   async register(email: string, password: string) {
@@ -86,7 +86,7 @@ export class AuthService {
 
   async sendEmailVerification() {
     await this.afAuth.auth.currentUser.sendEmailVerification();
-    this.router.navigate(['admin/verify-email']);
+    this.router.navigate(['/edit-profile']);
   }
 
   async sendPasswordResetEmail(passwordResetEmail: string) {

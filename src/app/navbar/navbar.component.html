@@ -108,6 +108,7 @@
           routerLinkActive="active current"
         >
           <a
+            *ngIf="appUser.name"
             class="py-2 d-none d-md-inline-block dropdown-toggle nav-link"
             ngbDropdownToggle
             id="dropdown01"
@@ -117,12 +118,23 @@
           >
             {{ appUser.name }}
           </a>
+          <a
+            *ngIf="!appUser.name"
+            class="py-2 d-none d-md-inline-block dropdown-toggle nav-link"
+            ngbDropdownToggle
+            id="dropdown01"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            Hi User!
+          </a>
           <div
             ngbDropdownMenu
             class="dropdown-menu"
             aria-labelledby="dropdown01"
           >
-            <a ngbDropdownItem class="dropdown-item" routerLink="/dashboard">
+            <a ngbDropdownItem class="dropdown-item" href="dashboard">
               Agro Dashboard
             </a>
             <a ngbDropdownItem class="dropdown-item" routerLink="/edit-profile">

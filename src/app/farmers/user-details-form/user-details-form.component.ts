@@ -6,6 +6,7 @@ import { UserService } from 'src/app/user.service';
 import { take } from 'rxjs/operators';
 import { DistrictService } from './district.service';
 import { CropsService } from './crops.service';
+import { CityService } from './city.service';
 
 @Component({
   selector: 'app-user-details-form',
@@ -15,6 +16,7 @@ import { CropsService } from './crops.service';
 export class UserDetailsFormComponent implements OnInit {
   appUser: AppUser;
   districts$;
+  cities$;
   crops$;
   //user = {}; //Use this to work add new user properly.
   user; //Use this while developing to remove some errors
@@ -26,6 +28,7 @@ export class UserDetailsFormComponent implements OnInit {
     private route: ActivatedRoute,
     private userService: UserService,
     private districtService: DistrictService,
+    private cityService: CityService,
     private cropsService: CropsService
   ) {
     auth.appUser$.subscribe((appUser) => (this.appUser = appUser));
@@ -34,6 +37,7 @@ export class UserDetailsFormComponent implements OnInit {
     //this.uid = this.route.snapshot.paramMap.get('id');
 
     this.districts$ = districtService.getDistricts();
+    this.cities$ = cityService.getCities();
     this.crops$ = cropsService.getCrops();
 
     if (this.uid) {

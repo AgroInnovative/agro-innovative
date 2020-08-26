@@ -24,58 +24,43 @@
             <label for="name">Name</label>
             <input
               #name="ngModel"
-              [(ngModel)]="appUser.name"
+              [(ngModel)]="user.name"
               name="name"
               id="name"
               type="text"
               class="form-control"
-              readonly
+              required
             />
-            <!-- <div
+            <div
               class="alert alert-danger"
               *ngIf="name.touched && name.invalid"
             >
               name is required
-            </div> -->
+            </div>
           </div>
 
           <div class="form-group">
-            <label for="city">City/Village</label>
-            <input
+            <label for="district">City/Village</label>
+            <select
               #city="ngModel"
               [(ngModel)]="user.city"
               name="city"
               id="city"
-              type="text"
               class="form-control"
               required
-            />
+            >
+              <option value=""></option>
+              <option *ngFor="let c of cities$ | async" [value]="c.key">
+                {{ c.payload.val().name }}
+              </option>
+            </select>
             <div
               class="alert alert-danger"
               *ngIf="city.touched && city.invalid"
             >
-              City/Village is required
+              City is required
             </div>
           </div>
-
-          <!-- <div class="form-group">
-            <label for="district">District</label>
-            <input
-              #district="ngModel"
-              ngModel
-              name="district"
-              id="district"
-              type="text"
-              class="form-control"
-              required
-            />
-            <div
-              class="alert alert-danger"
-              *ngIf="district.touched && district.invalid"
-            >
-              District is required
-            </div>
-          </div> -->
 
           <div class="form-group">
             <label for="district">District</label>
@@ -120,50 +105,6 @@
               <div *ngIf="phone.errors.min">Invalid phone Number</div>
             </div>
           </div>
-
-          <!-- <div class="form-group">
-                  <label for="category">Category</label>
-                  <select
-                    #category="ngModel"
-                    [(ngModel)]="product.category"
-                    name="category"
-                    id="category"
-                    class="form-control"
-                    required
-                  >
-                    <option value=""></option>
-                    <option *ngFor="let c of categories$ | async" [value]="c.key">
-                      {{ c.payload.val().name }}
-                    </option>
-                  </select>
-                  <div
-                    class="alert alert-danger"
-                    *ngIf="category.touched && category.invalid"
-                  >
-                    Category is required
-                  </div>
-                </div> -->
-
-          <!-- <div class="form-group">
-                  <label for="imageUrl">Image URL</label>
-                  <input
-                    #imageUrl="ngModel"
-                    [(ngModel)]="product.imageUrl"
-                    name="imageUrl"
-                    id="imageUrl"
-                    type="text"
-                    class="form-control"
-                    required
-                    url
-                  />
-                  <div
-                    class="alert alert-danger"
-                    *ngIf="imageUrl.touched && imageUrl.invalid"
-                  >
-                    <div *ngIf="imageUrl.errors.required">ImageUrl is required</div>
-                    <div *ngIf="imageUrl.errors.url">Please enter a valid URL..</div>
-                  </div>
-                </div> -->
         </div>
         <div class="col-md-6">
           <!-- <div class="card" style="width: 18rem;">
@@ -179,7 +120,9 @@
           </div>
         </div> -->
           <div class="form-group">
-            <label for="location">Share your cultivation area location</label>
+            <label for="location"
+              >Share your cultivation area location Postal Code</label
+            >
             <input
               #location="ngModel"
               [(ngModel)]="user.location"
@@ -193,7 +136,7 @@
               class="alert alert-danger"
               *ngIf="location.touched && location.invalid"
             >
-              Location is required to get predictions
+              Postal Code is required to get predictions
             </div>
           </div>
 

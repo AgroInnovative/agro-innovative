@@ -42,10 +42,14 @@
     <div class="row mx-auto">
       <div
         *ngFor="let partner of partners"
-        class="media col-md-4 col-sm-12 py-2"
+        class="media col-md-4 col-sm-12 py-2 partner-logo-popup"
       >
         <div class="media-left py-4" @slide>
-          <img src="{{ partner.logo }}" class="mr-3 partners-img" alt="..." />
+          <img
+            src="{{ partner.logo }}"
+            class="mr-3 partners-img card"
+            alt="..."
+          />
         </div>
       </div>
     </div>

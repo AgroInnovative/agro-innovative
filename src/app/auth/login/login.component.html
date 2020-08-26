@@ -1,6 +1,6 @@
-<div class="container py-5">
+<div class="p-5">
   <div class="row justify-content-sm-center">
-    <div class="col-sm-10 col-md-6">
+    <div>
       <div class="card border-info">
         <div class="card-header">Login</div>
         <div class="card-body">
@@ -9,37 +9,49 @@
               <img class="ourLogo" src="../../assets/img/logo.png" />
             </div>
             <div class="col-md-8">
-              <form>
+              <div class="form-group">
+                <label for="email">Email address:</label>
                 <input
                   type="text"
-                  class="form-control mb-2"
-                  placeholder="Email"
-                  required
-                  autofocus
+                  class="form-control"
+                  [(ngModel)]="email"
+                  placeholder="email"
                 />
+              </div>
+
+              <div class="form-group">
+                <label for="pwd">Password:</label>
                 <input
                   type="password"
-                  class="form-control mb-2"
-                  placeholder="Password"
-                  required
+                  class="form-control"
+                  [(ngModel)]="password"
+                  id="pwd"
+                  placeholder="password"
                 />
-                <button class="btn btn-secondary mb-1" type="submit">
-                  Login
-                </button>
-                <a type="submit" style="color: blue;">
-                  <u
-                    ><i><b> Create an account</b></i></u
-                  >
-                </a>
-                <button (click)="loginWithGoogle()" class="btn btn-success">
-                  Login With Google
-                </button>
-              </form>
+              </div>
+              <button
+                (click)="login()"
+                class="btn btn-secondary"
+                style="margin-left: 5px;"
+              >
+                Login
+              </button>
+              <a href="register">
+                <i>
+                  Create an account
+                </i>
+              </a>
             </div>
+            <button
+              (click)="loginWithGoogle()"
+              class="btn btn-danger"
+              style="width: 100%;"
+            >
+              Login With Google
+            </button>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-<hr />

@@ -39,8 +39,14 @@
       </tr>
       <tr>
         <td>Crops you have cultivated :</td>
-        <td>
-          <h5 class="card-title">{{ appUser.crops }}</h5>
+        <td *ngIf="appUser.crops === '1'">
+          <h5 class="card-title">Samba</h5>
+        </td>
+        <td *ngIf="appUser.crops === '2'">
+          <h5 class="card-title">Nadu</h5>
+        </td>
+        <td *ngIf="appUser.crops === '3'">
+          <h5 class="card-title">Kekulu</h5>
         </td>
       </tr>
       <button type="button" class="btn btn-success" routerLink="/edit-profile">

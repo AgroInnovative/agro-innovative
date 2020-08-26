@@ -10,6 +10,7 @@ import { AppUser } from 'src/app/common/models/app-user';
 export class MachineLearningPredictionComponent implements OnInit {
   appUser: AppUser;
   uid;
+  isGeneratingMLPrediction;
   constructor(public auth: AuthService) {}
 
   ngOnInit(): void {
@@ -19,6 +20,7 @@ export class MachineLearningPredictionComponent implements OnInit {
   }
 
   generatePredictions() {
+    this.isGeneratingMLPrediction = true;
     window.location.href =
       'https://elzianagro.herokuapp.com/pestPrediction/' + this.uid;
     event.preventDefault();

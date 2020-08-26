@@ -1,11 +1,13 @@
 <h4 class="card-title">
   Alert Section / Pest Attack Predictions
 </h4>
-<div class="card p-3 bg-dark text-white" style="border-radius: 25px;">
-  <h3>
-    {{ appUser.name }} ! Welcome to our Advanced Machine Learning based Elzian
-    Agro Farmer Dashboard
-  </h3>
+<!-- <div class="card p-3 bg-light text-black" style="border-radius: 25px;"> -->
+<div class="card p-3" style="border-radius: 25px; background: #f8f3d6;">
+  <h5>
+    {{ appUser.name }} !
+    <br />
+    Welcome to our Advanced Machine Learning based Elzian Agro Farmer Dashboard
+  </h5>
   <!-- <img src="..." class="card-img" alt="..." /> -->
   <div
     style="text-align: center;"
@@ -30,30 +32,148 @@
   </div>
 
   <div
-    class="card-text p-3"
+    class="card-text p-2"
     *ngIf="appUser.ML_generated_pest_prediction && appUser.city"
   >
     Location : <b> {{ appUser.city }} </b><br />
     ML model Predicted Pest for your cultivation:
     <b> {{ appUser.ML_generated_pest_prediction }}</b>
     <hr />
-    <div>
-      <h4><i> Description About the Pest Disease: </i></h4>
+
+    <div class="pb-3">
       According to the information you have provided about your cultivation
       area, Our most intelligent and accurate Machine Learning Model we have
-      trained has identified that
-      <b> {{ appUser.ML_generated_pest_prediction }}</b>
-      Disease will affect in your cultivation withing next 5-6 days. We have
-      used your crops details, location data and forecasted weather pattern
-      according to your area to get this prediction. So pre prepared to face
-      <b> {{ appUser.ML_generated_pest_prediction }}</b> and protect your hard
-      earned harvest.
+      trained has identified these details about the prediction for you
+    </div>
+
+    <!-- Browns Spot Pest Disease Note -->
+    <div *ngIf="appUser.ML_generated_pest_prediction == 'Brownspot'">
+      <h5><i> Description About the Pest Disease: </i></h5>
+
+      Brown spot is a fungal disease that infects the coleoptile, leaves, leaf
+      sheath, panicle branches, glumes, and spikelets.Its most observable damage
+      is the numerous big spots on the leaves which can kill the whole leaf.
+      When infection occurs in the seed, unfilled grains or spotted or
+      discolored seeds are formed.
+
+      <br />
+      <br /><b>Why it occurs </b> <br />
+      The disease can develop in areas with high relative humidity (86−100%) and
+      temperature between 16 and 36°C. It is common in unflooded and
+      nutrient-deficient soil, or in soils that accumulate toxic substances
+
+      <br /><br /><b>How to identify</b>
+      <ul>
+        <li>
+          Infected seedlings have small, circular, yellow brown or brown lesions
+          that may girdle the coleoptile and distort primary and secondary
+          leaves.
+        </li>
+
+        <li>
+          Starting at tillering stage, lesions can be observed on the leaves.
+          They are initially small, circular, and dark brown to purple-brown.
+        </li>
+      </ul>
+
+      <h5><i> Recommended Actions: </i></h5>
+      Improving soil fertility is the first step in managing brown spot.
+      <li>
+        Monitor soil nutrients regularly.
+      </li>
+      <li>
+        Apply required fertilizers.
+      </li>
+      <li>
+        For soils that are low in silicon, apply calcium silicate slag before
+        planting.
+      </li>
+    </div>
+
+    <!-- Rice Blast Pest Disease Note -->
+    <div *ngIf="appUser.ML_generated_pest_prediction == 'Rice Blast'">
+      <h5>Symptoms:</h5>
+
+      <br />
+
+      Initial symptoms white to gray-green lesions or spots with darker borders
+      produced on all parts of shoot Older lesions elliptical or spindle-shaped
+      and whitish to gray with necrotic borders Lesions wide in the center and
+      pointed toward either end Lesions may enlarge and coalesce to kill the
+      entire leaves Symptoms also observed on leaf collar, culm, culm nodes, and
+      the panicle neck node Nodal infection causes the culm to break at the
+      infected node Few, no seeds, or whiteheads when neck is infected or
+      rotten.
+
+      <br />
+      <br />
+      <h5>Recommendations</h5>
+      <br />
+      <ul>
+        <li>
+          Application of Carbofuran 3G @ 10-12 kg/acre or spraying of
+          Imidaclorprid 200SL @ 40ml or Chloropyriphos 20 EC @ 500ml in 200
+          litres of water. Repeat after 7 -10 days if needed.
+        </li>
+        <li>
+          Leaf yellowing can be minimized by spraying 2 % urea mixed with
+          Mancozeb at 2.5 gm/lit.
+        </li>
+        <li>
+          Instead of urea foliar fertilizer like multi-K (potassium nitrate) can
+          be sprayed at 1 per cent which impart resistance also because of high
+          potassium content
+        </li>
+      </ul>
+    </div>
+
+    <!-- Bacterial Blight -->
+    <div *ngIf="appUser.ML_generated_pest_prediction == 'Bacterial blight'">
+      <h5>Symptoms:</h5>
+
+      Water-soaked stripes on leaf blades; yellow or white stripes on leaf
+      blades; leaves appear grayish in color; plants wilting and rolling up;
+      leaves turning yellow; stunted plants; plant death; youngest leaf on plant
+      turning yellow
+
+      <br />
+      <br />
+      <h5>Cause</h5>
+      Bacterium
+
+      <br />
+      <h5>Comments</h5>
+      One of the most important diseases of rice; disease found in tropical and
+      temperate regions; greatest economic impact in Asia
+
+      <h5>
+        Management
+      </h5>
+      Bacterial blight can be effectively controlled by planting resistant rice
+      varieties; avoid excessive nitrogen fertilization; plow stubble and straw
+      into soil after harvest
+    </div>
+
+    <!-- False Smut -->
+    <div *ngIf="appUser.ML_generated_pest_prediction == 'False smut'">
+      <h5>Symptoms</h5>
+      Individual rice grain transformed into a mass of velvety spores or yellow
+      fruiting bodies Growth of velvety spores enclose floral parts Immature
+      spores slightly flattened, smooth, yellow, and covered by a membrane
+      Growth of spores result to broken membrane Mature spores orange and turn
+      yellowish green or greenish black Only few grains in a panicle are usually
+      infected and the rest are normal
+
+      <h5>Recommendations</h5>
+      At Boot stage spraying of Copper oxychloride 50% WP @ 2.5 gm/liter. If
+      disease persists spray crop with Propiconazole 25% EC @ 1ml/litre of water
+      after 15 days interval for effective control of disease.
     </div>
     <hr />
-    <div>
-      <h4><i> Recommended Actions: </i></h4>
-      Here are some recommended actions that you can take to ...
-    </div>
+  </div>
+
+  <div *ngIf="isGeneratingMLPrediction">
+    <spinner></spinner>
   </div>
 
   <button

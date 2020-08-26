@@ -40,6 +40,7 @@ import { CropsService } from './farmers/user-details-form/crops.service';
 import { ShoppingCartService } from './products/shopping-cart.service';
 import { OrderService } from './check-out/order.service';
 import { WeatherService } from './other/weather-widget/weather.service';
+import { CityService } from './farmers/user-details-form/city.service';
 
 import { ShoppingCartComponent } from './products/shopping-cart/shopping-cart.component';
 import { CheckOutComponent } from './check-out/check-out.component';
@@ -60,6 +61,7 @@ import { WeatherSectionComponent } from './home/weather-section/weather-section.
 import { DashboardSectionComponent } from './home/dashboard-section/dashboard-section.component';
 import { ProductSectionComponent } from './home/product-section/product-section.component';
 import { MachineLearningPredictionComponent } from './other/machine-learning-prediction/machine-learning-prediction.component';
+import { SpinnerComponent } from './other/spinner/spinner.component';
 
 @NgModule({
   declarations: [
@@ -93,6 +95,7 @@ import { MachineLearningPredictionComponent } from './other/machine-learning-pre
     DashboardSectionComponent,
     ProductSectionComponent,
     MachineLearningPredictionComponent,
+    SpinnerComponent,
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebase),
@@ -120,6 +123,7 @@ import { MachineLearningPredictionComponent } from './other/machine-learning-pre
     ShoppingCartService,
     OrderService,
     WeatherService,
+    CityService,
   ],
   bootstrap: [AppComponent],
 })
