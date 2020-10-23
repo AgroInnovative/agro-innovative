@@ -1,7 +1,8 @@
 /* About us */
 .About-us-div {
   height: "90%";
-  background: linear-gradient(to right, #4b9643, #156136);
+  /* background: linear-gradient(to right, #4b9643, #156136); */
+  background: linear-gradient(to right, #77a172, #156136);
 }
 
 .agro-innovative-logo {

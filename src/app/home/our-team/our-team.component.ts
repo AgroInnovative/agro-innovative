@@ -9,26 +9,26 @@ export class OurTeamComponent {
   teamMembers = [
     {
       name: 'Lilan Udayanga',
-      position: 'Doctor of Finance',
-      description:'Researcing on - The impact of new technologies on the sustainability development of Agribusinesses in Sri Lanka',
+      position: 'Director of Finance',
+      description:'Currently researcing on - The impact of new technologies on the sustainability development of Agribusinesses in Sri Lanka',
       avatar: 'assets/img/team/lilan.png',
     },
     {
       name: 'Mihindu Ranasinghe',
       position: 'Director of Technology & Innovations',
-      description:'Researching on - Machine Learning solutions on predicting pest attacks in paddy cultivation',
+      description:'Currently researching on - Machine Learning and AI solutions on predicting upcoming pest attacks in agriculture sector',
       avatar: 'assets/img/team/mihindu.png',
     },
     {
       name: 'Pankajan Satkunam',
       position: 'Director of Research and Development',
-      description:'Researching on - converting air-condition machines into a weather data gathering weather station',
+      description:'Currently researching on - Converting air-condition machines into weather data gathering weather stations',
       avatar: 'assets/img/team/Pankajan.png',
     },
     {
       name: 'Zeena Youhan',
       position: 'Director of Public Relations',
-      description:'Researching on - Reviewing pros and cons of existing solutions on predicting pest attacks in paddy cultivation',
+      description:'Currently researching on - Reviewing existing solutions for predicting upcoming pest attacks in agriculture',
       avatar: 'assets/img/team/zeena.png',
     },
     {

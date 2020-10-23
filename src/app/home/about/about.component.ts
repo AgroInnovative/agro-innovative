@@ -15,7 +15,7 @@ import {
 })
 export class AboutComponent implements OnInit {
   companyName = 'ELZIAN AGRO';
-  companyLogo = 'assets/img/PAS_AI.png';
+  companyLogo = 'assets/img/elzian_agro.png';
   constructor() {}
 
   ngOnInit(): void {}

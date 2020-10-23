@@ -15,10 +15,10 @@ export class MentorsComponent  {
       avatar: 'assets/img/mentors/Asanka_Pallewatta2.jpg',
     },
     {
-      name: 'Samitha Patabendige',
-      position: 'Data Scientist and Data Engineer , Specialist Data Engineer, Rio Tinto, Western Australia',
-      description: 'BSc. Eng, Electrical and Information Engineering – University of Ruhuna',
-      avatar: 'assets/img/mentors/Samitha Patabendige.jpg',
+      name: 'Damith Gangodawilage',
+      position: 'Doctoral Candidate in Entrepreneurship and Compliance Management , MD/Chief Business Architect - Corporate Business Solutions Pvt. Ltd, Founder/Chief Compliance Officer – Taxperts Lanka Pvt. Ltd',
+      description:'Damith Gangodawilage is an award-winning serial entrepreneur with over 20 year of experience in taxation and financial management. He is currently pursuing his Doctorate in Entrepreneurship and Tax Compliance at the University of Kelaniya, Sri Lanka. His research interests are entrepreneurs tax compliance behavior, entrepreneurial success and digital entrepreneurship',
+      avatar: 'assets/img/mentors/Damith_Gangodawilage.jpg',
     },
     {
       name: 'Thamara Gunasekara',
@@ -27,16 +27,16 @@ export class MentorsComponent  {
       avatar: 'assets/img/mentors/Thamara_Gunasekare.jpg',
     },
     {
-      name: 'Sachini Nimansha',
-      position: 'MSc in Organizational Management (University of Peradeniya) , BSc (Hons) Agricultural Resource Management and Technology (University of Ruhuna)',
-      description:'Advanced National Diploma in Human Resource Management (National Institute of Business Management)',
-      avatar: 'assets/img/mentors/Sachini_Nimansha.jpg',
+      name: 'Samitha Patabendige',
+      position: 'Data Scientist and Data Engineer , Specialist Data Engineer, Rio Tinto, Western Australia',
+      description: 'BSc. Eng, Electrical and Information Engineering – University of Ruhuna',
+      avatar: 'assets/img/mentors/Samitha Patabendige.jpg',
     },
     {
-      name: 'Damith Gangodawilage',
-      position: 'Doctoral Candidate in Entrepreneurship and Compliance Management , MD/Chief Business Architect - Corporate Business Solutions Pvt. Ltd, Founder/Chief Compliance Officer – Taxperts Lanka Pvt. Ltd',
-      description:'Damith Gangodawilage is an award-winning serial entrepreneur with over 20 year of experience in taxation and financial management. He is currently pursuing his Doctorate in Entrepreneurship and Tax Compliance at the University of Kelaniya, Sri Lanka. His research interests are entrepreneurs tax compliance behavior, entrepreneurial success and digital entrepreneurship',
-      avatar: 'assets/img/mentors/Damith_Gangodawilage.jpg',
+      name: 'Sachini Nimansha',
+      position: 'MSc in Organizational Management (University of Peradeniya) , BSc (Hons) Agricultural Resource Management and Technology (University of Ruhuna)',
+      description:'Advanced National Diploma in Human Resource Management (NIBM)',
+      avatar: 'assets/img/mentors/Sachini_Nimansha.jpg',
     },
   ];
 
