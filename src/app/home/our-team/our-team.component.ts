@@ -9,7 +9,7 @@ export class OurTeamComponent {
   teamMembers = [
     {
       name: 'Lilan Udayanga',
-      position: 'Director of Finance',
+      position: 'Doctor of Finance',
       avatar: 'assets/img/team/lilan.png',
     },
     {

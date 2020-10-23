@@ -62,6 +62,7 @@ import { DashboardSectionComponent } from './home/dashboard-section/dashboard-se
 import { ProductSectionComponent } from './home/product-section/product-section.component';
 import { MachineLearningPredictionComponent } from './other/machine-learning-prediction/machine-learning-prediction.component';
 import { SpinnerComponent } from './other/spinner/spinner.component';
+import { MentorsComponent } from './home/mentors/mentors.component';
 
 @NgModule({
   declarations: [
@@ -96,6 +97,7 @@ import { SpinnerComponent } from './other/spinner/spinner.component';
     ProductSectionComponent,
     MachineLearningPredictionComponent,
     SpinnerComponent,
+    MentorsComponent,
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebase),
